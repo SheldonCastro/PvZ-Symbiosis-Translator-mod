@@ -11,7 +11,7 @@ Translation corrections, new translations, texture localization, code fixes/feat
 - Match source strings exactly and ordinally; do not add fuzzy or global substring translation.
 - Preserve placeholder identity and count.
 - Keep target TMP markup valid.
-- Follow the canonical glossary and PT-BR style guide.
+- For PT-BR, follow the canonical glossary and PT-BR style guide. Other language packs should provide and follow their own reviewed terminology guidance.
 - Use dynamic rules only for genuinely variable whole strings.
 - Do not invent plant, zombie, item, or mechanic names without context.
 - Do not submit game binaries, generated game assemblies, extracted asset dumps, original game assets, credentials, private logs, caches, or personal paths.

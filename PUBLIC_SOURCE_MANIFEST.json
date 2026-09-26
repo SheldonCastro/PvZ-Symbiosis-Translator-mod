@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "privateSourceCommit": "0e44268a3a00ecee95c63acaf3eefe93844c9dcc",
+  "privateSourceCommit": "2d39ef1332e91c658a49d085339a2ce508f21fe6",
   "version": "1.1.0",
   "files": [
     {
@@ -60,8 +60,13 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 1905,
-      "sha256": "82F42ECEEF706E951C01EC63DB62B9F0D7FC1C0ED1FCC0D42AF1316A8E0ECA3A"
+      "bytes": 2004,
+      "sha256": "8832A278A074436FDCF1ADDD7DE845B40AC47F3F48BCE4C039F653A34EEBA53F"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 1337,
+      "sha256": "9C6FEBE4CC7668583CB2E5A138626A60974FD3F5B528DBF4F4AF0498806B7FA3"
     },
     {
       "path": "deploy.ps1",
@@ -70,8 +75,8 @@
     },
     {
       "path": "Docs/ARCHITECTURE.md",
-      "bytes": 1730,
-      "sha256": "7775D8FD5F0C08C7AB3020BD247BD80FFBA8257A446C60205A4B47544441D84B"
+      "bytes": 1835,
+      "sha256": "C30B5DDF340DFC45C564BF4A07030FD4CCE6B6F1B54DB025942F73BF51C6A918"
     },
     {
       "path": "Docs/AUDIO.md",
@@ -140,8 +145,8 @@
     },
     {
       "path": "Docs/LOCALIZATION.md",
-      "bytes": 1154,
-      "sha256": "845DD63F21B8C0B85304E7D26D18535D236C88EA7DFCCB7F22B3DEF1217FD377"
+      "bytes": 1272,
+      "sha256": "93C3ECBCB048EDC3960102426CE88B5AAE582FFFFF5E15AE44DC638A6E762154"
     },
     {
       "path": "Docs/PROJECT_STRUCTURE.md",
@@ -710,8 +715,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3559,
-      "sha256": "110F1F56F121FA8F0D641E5FB1DD470B96E729F9D1BA191191C56944B060A1B2"
+      "bytes": 4106,
+      "sha256": "587DF30158367CBCAC7E3CCAB36F941C55A08BAECA85DD24AC79E96BF7CCD932"
     },
     {
       "path": "ROADMAP.md",
@@ -735,8 +740,8 @@
     },
     {
       "path": "THIRD_PARTY.md",
-      "bytes": 3541,
-      "sha256": "0E123D8E1A28FC65687E69BA5BFFEF1D74C86A9E1B79A2CD1EBAF69B20C70E59"
+      "bytes": 3883,
+      "sha256": "B28B55E4882C53D819507D3E42FC5B180EC6B5880206DC2825F4803615B63D97"
     },
     {
       "path": "Tools/AssetExtractor/pyproject.toml",
@@ -810,8 +815,8 @@
     },
     {
       "path": "Tools/PublicRelease/public-allowlist.json",
-      "bytes": 1545,
-      "sha256": "B56AC6EF5AAA34161B4C81F3811EBAEB264E75ABCA8C124CD24805E8CD765217"
+      "bytes": 1563,
+      "sha256": "29ED6121E1075CEC4E42376720EF3B1262F18909DA10A143BAA8315251711AD4"
     },
     {
       "path": "Tools/PublicRelease/README.md",
@@ -820,8 +825,8 @@
     },
     {
       "path": "Tools/PublicRelease/validate_public_snapshot.ps1",
-      "bytes": 2559,
-      "sha256": "6142A588566CAE7A38DDF6B4E2EF49747B85D6BBDF3393E8675D1A746521089B"
+      "bytes": 2647,
+      "sha256": "DD9A0F2D26D7D9DFC9BE8EFEDB7D9F7497D3E3D4E554B510F0B216D33D31533B"
     },
     {
       "path": "Tools/TranslationExport/Program.cs",

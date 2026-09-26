@@ -23,7 +23,8 @@ foreach($file in $files){
     if($relative -eq 'Tools/PublicRelease/validate_public_snapshot.ps1'){continue}
     $content=[IO.File]::ReadAllText($file.FullName)
     if($content -match '(?i)([A-Z]:\\Users\\|/Users/|/home/)'){Add-Issue 'personal-path' $relative $matches[0]}
-    if($relative -ne 'LICENSE' -and $content -match '(?i)Sheldon'){Add-Issue 'personal-name' $relative 'owner personal name'}
+    $attributionFiles=@('LICENSE','README.md','CREDITS.md','THIRD_PARTY.md')
+    if($relative -notin $attributionFiles -and $content -match '(?i)Sheldon'){Add-Issue 'personal-name' $relative 'owner personal name'}
     if($content -match '(?i)(OPENAI_API_KEY|sk-[A-Za-z0-9_-]{16,}|(?:password|passwd|secret|api[_-]?key|access[_-]?token)\s*[:=]\s*["''][^"'']+["''])'){Add-Issue 'possible-secret' $relative $matches[0]}
 }
 $result=[pscustomobject]@{

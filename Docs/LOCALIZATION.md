@@ -1,6 +1,6 @@
 # Localization
 
-A locale is a self-contained directory below `Localization/<locale>`. Copy `_template` to start a language and update its manifest. `locale` must match the folder, `sourceLocale` is `zh-CN`, and the tested game version must be declared.
+The project is MultiLang: each locale is a self-contained directory below `Localization/<locale>`. PT-BR is currently the primary and most complete pack, not an architectural limit. Copy `_template` to start another language and update its manifest. `locale` must match the folder, `sourceLocale` is `zh-CN`, and the tested game version must be declared.
 
 ## Files
 

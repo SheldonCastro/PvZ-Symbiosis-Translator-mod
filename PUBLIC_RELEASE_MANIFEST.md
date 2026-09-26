@@ -2,24 +2,24 @@
 
 - Status: **READY FOR PUBLICATION — MANUAL APPROVAL REQUIRED**
 - Version: **1.1.0**
-- Private source commit: `0e44268a3a00ecee95c63acaf3eefe93844c9dcc`
-- Deterministic preparation timestamp (source commit): 2026-09-26T13:23:09-03:00
+- Private source commit: `2d39ef1332e91c658a49d085339a2ce508f21fe6`
+- Deterministic preparation timestamp (source commit): 2026-09-26T13:43:21-03:00
 - Build: Release PASS; 0 warnings; 0 errors
 - Candidate tests: TOTAL: 159 PASS, 0 FAIL
 - QA: PASS
 - Game baseline: 1.2.0; Unity 6000.0.41f1; MelonLoader 0.7.3
 - Localization: 1,735 exact; 3 dynamic
 - Texture source mappings: 0 (private Home technical test excluded)
-- Runtime validation: PASS: selected commit uses runtime source validated in real game
-- Source-manifest SHA-256 / content digest: `8EBE34B04318C965142B94A6F9D246F454CB60EB2B7CD89B1DA8BAA7C03645E9`
+- Runtime validation: PASS: runtime source unchanged from validated public release
+- Source-manifest SHA-256 / content digest: `C9C1328553351481F3EA9C6E9AFF9E3C3A6B65610DBBE37B0C47DC436C9575F9`
 
 ## Inventory
 
-- Files before generated release manifest: 167
-- Bytes before generated release manifest: 1798582
+- Files before generated release manifest: 168
+- Bytes before generated release manifest: 1801386
 - Source files: 76
 - Localization files: 38
-- Documentation files: 38
+- Documentation files: 39
 - Tool files: 19
 
 ## Excluded categories
@@ -39,7 +39,7 @@
 | PvZ_Symbiosis_Translator/Localization/pt-BR/Strings/exact.json | 515890 |
 | PvZ_Symbiosis_Translator/Plugin/PvZSymbiosisTranslatorMod.cs | 119035 |
 | Tests/Program.cs | 67333 |
-| PUBLIC_SOURCE_MANIFEST.json | 30726 |
+| PUBLIC_SOURCE_MANIFEST.json | 30876 |
 | PvZ_Symbiosis_Translator/UI/ModLabels.cs | 25433 |
 | PvZ_Symbiosis_Translator/QA/LocalizationQaService.cs | 22713 |
 | PvZ_Symbiosis_Translator/Resources/Strings/almanac.json | 20400 |

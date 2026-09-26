@@ -1,6 +1,6 @@
 # Architecture
 
-The translator is a MelonLoader mod for Unity IL2CPP. It keeps maintained files outside game archives and applies changes at runtime.
+PvZ Symbiosis Translator is a MultiLang MelonLoader mod for Unity IL2CPP. Each locale is an independent external pack; PT-BR is the current primary pack. The mod keeps maintained files outside game archives and applies changes at runtime.
 
 ## Flow
 

@@ -1,6 +1,6 @@
 # PvZ Symbiosis Translator
 
-An experimental MelonLoader translation framework for Plants vs. Zombies: Symbiosis, currently focused on Brazilian Portuguese.
+An open-source MultiLang translation mod for Plants vs. Zombies: Symbiosis. Brazilian Portuguese is currently the primary and most developed localization, while the architecture supports independent language packs.
 
 ## Status
 
@@ -37,9 +37,9 @@ Screenshots will be added only after they are reviewed for rights, current UI ac
 
 Read `Docs/DEVELOPMENT_SETUP.md` and `Docs/BUILDING.md`. The public tree excludes game binaries and generated references, so provide your own installation.
 
-## Translation Contributions
+## Language Packs and Translation Contributions
 
-Read `CONTRIBUTING.md`, `Docs/LOCALIZATION.md`, and the style/glossary documents. Preserve exact sources, placeholders, and valid markup.
+Create or improve language packs under `Localization/<locale>`. Read `CONTRIBUTING.md` and `Docs/LOCALIZATION.md`; PT-BR contributors should also follow its style and glossary documents. Preserve exact sources, placeholders, and valid markup.
 
 ## Bug Reports and Pull Requests
 
@@ -77,4 +77,8 @@ The project license does NOT grant rights over third-party game assets.
 
 ## Credits
 
-Original translator project by Xyll. Repository maintained by project contributors. Third-party notices are in `THIRD_PARTY.md`.
+- **SheldonCastro (Xyll)** — creator and maintainer of PvZ Symbiosis Translator.
+- **厘子gg** — creator of Plants vs. Zombies: Symbiosis. [Bilibili](https://space.bilibili.com/1343792501)
+- **Teyliu / PVZFusionTranslation** — important workflow and community-project inspiration.
+
+See [CREDITS.md](CREDITS.md) for full project, inspiration, framework, library, and tool credits. Licensing and redistribution notices are in [THIRD_PARTY.md](THIRD_PARTY.md).
