@@ -1,0 +1,45 @@
+bin/
+obj/
+.vs/
+*.log
+backups/
+work/
+dist/
+
+# IDE, test and build output
+.vscode/
+TestResults/
+artifacts/
+*.user
+*.suo
+*.tmp
+*.cache
+*.pdb
+Latest.log
+
+# Original game and runtime dependencies are provided by the local installation.
+PVZGS.exe
+GameAssembly.dll
+UnityPlayer.dll
+global-metadata.dat
+*_Data/
+MelonLoader/
+UserData/
+*.assets
+*.resS
+*.unity3d
+
+# Runtime-only state; source packs and documentation remain tracked.
+/Mods/
+/Cache/
+/Logs/
+
+# Generated offline translation workspace and Python environments
+TranslatorWorkspace/
+ExtractedAssets/
+Tools/AssetExtractor/output/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/

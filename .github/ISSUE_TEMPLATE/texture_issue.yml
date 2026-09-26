@@ -1,0 +1,34 @@
+name: Texture issue
+description: Report a missing or incorrect localized visual
+title: "[Texture] "
+labels: ["texture"]
+body:
+  - type: input
+    id: screen
+    attributes:
+      label: Screen or context
+    validations:
+      required: true
+  - type: input
+    id: asset
+    attributes:
+      label: Runtime texture or sprite name, if known
+  - type: textarea
+    id: actual
+    attributes:
+      label: Current result and screenshot
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected localized result
+    validations:
+      required: true
+  - type: checkboxes
+    id: policy
+    attributes:
+      label: Asset policy
+      options:
+        - label: I did not attach an extracted asset dump or unchanged original game atlas.
+          required: true

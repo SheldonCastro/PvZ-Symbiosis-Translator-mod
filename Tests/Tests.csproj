@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings><EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../PvZ_Symbiosis_Translator/Core/TextRefreshPolicy.cs" Link="Core/TextRefreshPolicy.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/UI/ModLabels.cs" Link="UI/ModLabels.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/UI/NativeTranslatorMenuPolicy.cs" Link="UI/NativeTranslatorMenuPolicy.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/UI/NativeHomeLauncherPolicy.cs" Link="UI/NativeHomeLauncherPolicy.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/UI/NativeSettingsMenuModel.cs" Link="UI/NativeSettingsMenuModel.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/UI/NativeAssetIds.cs" Link="UI/NativeAssetIds.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/UI/TranslatorUiLayout.cs" Link="UI/TranslatorUiLayout.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/DiagnosticSource.cs" Link="Diagnostics/DiagnosticSource.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Core/TextureMatch.cs" Link="Core/TextureMatch.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Core/PngCodec.cs" Link="Core/PngCodec.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Core/ReloadCoordinator.cs" Link="Core/ReloadCoordinator.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/TranslationExportWriter.cs" Link="Diagnostics/TranslationExportWriter.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/DynamicCandidateFamilies.cs" Link="Diagnostics/DynamicCandidateFamilies.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Localization/*.cs" Link="Localization/%(Filename)%(Extension)" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Localization/Reload/*.cs" Link="Localization/Reload/%(Filename)%(Extension)" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Core/ModPaths.cs" Link="Core/ModPaths.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Configuration/*.cs" Link="Configuration/%(Filename)%(Extension)" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/RuntimeStringCollector.cs" Link="Diagnostics/RuntimeStringCollector.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/DiagnosticString.cs" Link="Diagnostics/DiagnosticString.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/HanSourceDetector.cs" Link="Diagnostics/HanSourceDetector.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/TranslatorSessionService.cs" Link="Diagnostics/TranslatorSessionService.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/TranslatorExportService.cs" Link="Diagnostics/TranslatorExportService.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/DiagnosticsModels.cs" Link="Diagnostics/DiagnosticsModels.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/DiagnosticsService.cs" Link="Diagnostics/DiagnosticsService.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/Diagnostics/DiagnosticsReportWriter.cs" Link="Diagnostics/DiagnosticsReportWriter.cs" />
+    <Compile Include="../PvZ_Symbiosis_Translator/QA/*.cs" Link="QA/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

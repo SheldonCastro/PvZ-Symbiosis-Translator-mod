@@ -1,0 +1,17 @@
+[
+  {
+    "id": "slider-seconds",
+    "pattern": "^(?<value>\\d+(?:[.,]\\d+)?)秒(?<zwsp>\\u200B?)$",
+    "target": "${value} s${zwsp}"
+  },
+  {
+    "id": "slider-multiplier",
+    "pattern": "^(?<value>\\d+(?:[.,]\\d+)?)倍(?<zwsp>\\u200B?)$",
+    "target": "${value}×${zwsp}"
+  },
+  {
+    "id": "type-one-value",
+    "pattern": "^一类:(?<value>\\d+)$",
+    "target": "Tipo um: ${value}"
+  }
+]

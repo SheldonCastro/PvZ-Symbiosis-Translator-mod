@@ -1,0 +1,21 @@
+name: Validate public source
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  dependency-independent-tests:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 6.0.x
+      - name: Zero Canvas guard
+        shell: pwsh
+        run: ./Tools/check-zero-canvas.ps1
+      - name: Tests and pack QA
+        shell: pwsh
+        run: dotnet run --project Tests -c Release -- ./PvZ_Symbiosis_Translator/Localization/pt-BR

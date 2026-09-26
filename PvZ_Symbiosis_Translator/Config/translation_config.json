@@ -1,0 +1,21 @@
+{
+  "language": "pt-BR",
+  "enabled": true,
+  "dynamicRules": true,
+  "trackUntranslated": true,
+  "fontReplacement": true,
+  "textureReplacement": false,
+  "audioReplacement": false,
+  "translatorMode": false,
+  "debugLogging": false,
+  "autoReload": false,
+  "validateBeforeApply": true,
+  "captureUnknown": true,
+  "autoExportOnContextChange": false,
+  "detailedContext": true,
+  "uiNotifications": true,
+  "uiScalePercent": 100.0,
+  "toggleTranslationKey": "Insert",
+  "reloadTranslationKey": "PageUp",
+  "diagnosticKey": "PageDown"
+}

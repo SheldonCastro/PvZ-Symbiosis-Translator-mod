@@ -1,0 +1,837 @@
+{
+  "schemaVersion": 1,
+  "privateSourceCommit": "0e44268a3a00ecee95c63acaf3eefe93844c9dcc",
+  "version": "1.1.0",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 72,
+      "sha256": "664480D856184343DD505469A29B28C564D462049EEC3259C44AE727C6A1E5D8"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "bytes": 1123,
+      "sha256": "DCB88C667914E2F356F9790CBD3653FBFDACCC48240ADD69F59B371AB5DFCCC8"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "bytes": 28,
+      "sha256": "1F103C6A9DD07CD13A9A6F17ACE6B813F47747EB9CB7E00488CB2073CAAF91BB"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "bytes": 488,
+      "sha256": "6109F37705EA2D0543703561B258CA85327E4A5E041A6D8FD3A08CD37151DF8A"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/texture_issue.yml",
+      "bytes": 812,
+      "sha256": "497C384C6F98A6C84630616DB0518A42311E00F7ABF3B179BF167728E22D6DA4"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/translation_issue.yml",
+      "bytes": 738,
+      "sha256": "B949BEA179FE3AD3350495FAB1EABDE47F39DF74E02339EF83EC04D9233E2E72"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "bytes": 764,
+      "sha256": "E00CAD47DEA9585CA34134457ADEFD8E28D86650199014EB02EF1E3F4FF9F609"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "bytes": 522,
+      "sha256": "87746BDFE0BDA38B983C74FDEDCA63A0AAB1326E050FF71A69CE347F24FC09D7"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 634,
+      "sha256": "0A61DB12A941A116636FBD967EBEDFB45C48FB6E3F623F5001C527CABA41F454"
+    },
+    {
+      "path": "build.ps1",
+      "bytes": 571,
+      "sha256": "57D9BCA00493B2AF1C22FB18B78B9B5675073CFE65215CDB0F5F9DF756441495"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1991,
+      "sha256": "F2FC0D50069368C2826E7BA127C39FC1A01C3BDCFB19A72E7CB1E59E208A79F6"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 1905,
+      "sha256": "82F42ECEEF706E951C01EC63DB62B9F0D7FC1C0ED1FCC0D42AF1316A8E0ECA3A"
+    },
+    {
+      "path": "deploy.ps1",
+      "bytes": 8358,
+      "sha256": "DC43FFD363AAC954F4286F04460C1EB652554FC3DFB11B739FAF52224785B0BE"
+    },
+    {
+      "path": "Docs/ARCHITECTURE.md",
+      "bytes": 1730,
+      "sha256": "7775D8FD5F0C08C7AB3020BD247BD80FFBA8257A446C60205A4B47544441D84B"
+    },
+    {
+      "path": "Docs/AUDIO.md",
+      "bytes": 676,
+      "sha256": "C68B82646C9A273091CD3DFB775D3AEF0F7599237CEE628F819BED73D128450C"
+    },
+    {
+      "path": "Docs/AUTO_RELOAD.md",
+      "bytes": 690,
+      "sha256": "9CA2149937D43EB1186F3101C9ED1A6855F81325717DDCC450CEFFAB4DB4B794"
+    },
+    {
+      "path": "Docs/BUILDING.md",
+      "bytes": 1194,
+      "sha256": "10C4A2F89470C54C44A828E76A5C7BA90C69EC91D76E9EA8323A91FAAFEC6DB0"
+    },
+    {
+      "path": "Docs/CONTRIBUTING.md",
+      "bytes": 431,
+      "sha256": "C1C1E0E80C4EA49F58B66965B6C269F73C83DA5350F4B7C79CADEBFE9F519923"
+    },
+    {
+      "path": "Docs/DEPENDENCIES.md",
+      "bytes": 845,
+      "sha256": "9C9DFF97C9AD7DBDEDD0AA96C05F6A7E921D05C028A439176F2ED32E872858AA"
+    },
+    {
+      "path": "Docs/DEVELOPMENT_SETUP.md",
+      "bytes": 1085,
+      "sha256": "1BBE81DF53382BE740DB1A8B63AA0481B9996C5A4D9FBCF2987C01ED4F2D7723"
+    },
+    {
+      "path": "Docs/DIAGNOSTICS.md",
+      "bytes": 1010,
+      "sha256": "F4E909BFDC170025F01EEEEEEE745197099E34BECAACC7D237FFA21055063DEE"
+    },
+    {
+      "path": "Docs/ENTITY_GLOSSARY.md",
+      "bytes": 980,
+      "sha256": "CCEB0822FC976F7273AB1109C42FF036ECBC48C7CA77B3640659B3FE2EA39A6D"
+    },
+    {
+      "path": "Docs/EXPORTS_AND_CAPTURE.md",
+      "bytes": 1022,
+      "sha256": "A74EE896D592ACBE97C9E959D6E8D896E45D7A61088C019D1677F5C53FDB3BC9"
+    },
+    {
+      "path": "Docs/FEATURE_STATUS.md",
+      "bytes": 1139,
+      "sha256": "00078C07DEA69C5C025CAA7670E551D43D26EF75F68568F317A13E1D61489FD2"
+    },
+    {
+      "path": "Docs/FONTS.md",
+      "bytes": 706,
+      "sha256": "0AC364F7D1CBC1F7911B002DCDA3BF0020FA884EBF1E84BAF1D65A4E9C4EC2B1"
+    },
+    {
+      "path": "Docs/KNOWN_LIMITATIONS.md",
+      "bytes": 1245,
+      "sha256": "7F47CA6AF7DBCC86E31580F02DA3D65834E5A894F1DD007C6A776ADBAE53A929"
+    },
+    {
+      "path": "Docs/LICENSING_DECISION.md",
+      "bytes": 762,
+      "sha256": "D344942B742883E52BE502025F9C86486D137F161EE4F312AE0E3B2917CDFD28"
+    },
+    {
+      "path": "Docs/LOCALIZATION.md",
+      "bytes": 1154,
+      "sha256": "845DD63F21B8C0B85304E7D26D18535D236C88EA7DFCCB7F22B3DEF1217FD377"
+    },
+    {
+      "path": "Docs/PROJECT_STRUCTURE.md",
+      "bytes": 904,
+      "sha256": "C1455EB8CCC7A64C516E412B7B91D526F0BBE9CF9D187AB7507042593850FADB"
+    },
+    {
+      "path": "Docs/PTBR_STYLE_GUIDE.md",
+      "bytes": 3086,
+      "sha256": "4645F13004A097EF3CAE52E633E2C8A02084C49060946070F82B120FC224E061"
+    },
+    {
+      "path": "Docs/QA.md",
+      "bytes": 1101,
+      "sha256": "243B9E1EA4E4FC53A5F2A99691A61DAFD9B1199C9E973AFA370696EC5800182F"
+    },
+    {
+      "path": "Docs/README.md",
+      "bytes": 1962,
+      "sha256": "BAD9BB8115DF2B76E04BCA8564F2CAE6FD01DC6816B54F5A2056F7B7B918CBF2"
+    },
+    {
+      "path": "Docs/RICH_TEXT_TRANSLATION.md",
+      "bytes": 7025,
+      "sha256": "86EF76615C0054BDB9426B55DA1A4B92A5D9A66CE864E100554E48E2AEDB6E72"
+    },
+    {
+      "path": "Docs/TEXTURE_CONTRIBUTING.md",
+      "bytes": 1939,
+      "sha256": "BF0EF5501C01A5362971553DFBDD0DE42F8F66334223B26E8220E17318A51A4B"
+    },
+    {
+      "path": "Docs/TEXTURE_LOCALIZATION_PIPELINE.md",
+      "bytes": 3774,
+      "sha256": "14101CA10320AA0F1D1DE917D8980F4F2395A0331EF4D2A820A4D348739528D1"
+    },
+    {
+      "path": "Docs/TEXTURE_PACK.md",
+      "bytes": 1046,
+      "sha256": "9AB0555D0AA35034063464B9AF65BED0211B2C8E887CDED0EABC884BBA4D9203"
+    },
+    {
+      "path": "Docs/TEXTURES.md",
+      "bytes": 1999,
+      "sha256": "B1487B2E5923063B82EA9AF402FA187A1C63084E1FE7484927961004066A6589"
+    },
+    {
+      "path": "Docs/TRANSLATION_PIPELINE.md",
+      "bytes": 1197,
+      "sha256": "5038B5A37771FE295F98BFCF5EECD4F3D09554FB2682DF80F36163E769BDE73E"
+    },
+    {
+      "path": "Docs/UI_SYSTEM.md",
+      "bytes": 1019,
+      "sha256": "8390A93A1CDF42C996B4C4CFF83CA2BD42251BC472945BF15FF36D6B080139B8"
+    },
+    {
+      "path": "Docs/VERSIONING.md",
+      "bytes": 691,
+      "sha256": "74C6AE6089A245A73DAD810AB57C108F0E89BB2240A32BAE5DBBFD924C885ADB"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1070,
+      "sha256": "2E89D8B4DB7A6C8E18F36E04880C4768400ED59CEBBBCE092C763EDFC7340C16"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Assets/AudioStore.cs",
+      "bytes": 3691,
+      "sha256": "9BAC6908959D4A0CB73DE1B255869AADA61E8FCEEF8921B50A8664C62BF0D68B"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Assets/FontStore.cs",
+      "bytes": 6892,
+      "sha256": "27BAB3493D108D3AAF9CA22724405CFA63E70A06C820C326E0E8067E25CC0A65"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Assets/RuntimeImageService.cs",
+      "bytes": 1999,
+      "sha256": "D9FEF6A85212410B395DC1A15EB4FE6093BF3E8D91EDE394C880E17517F907F4"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Assets/TextureDiagnostics.cs",
+      "bytes": 5358,
+      "sha256": "D2A236894D0D1345B5DD95C159F447F4731864EE5C5A2D27232D4C8AB8A55CAF"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Assets/TextureModels.cs",
+      "bytes": 861,
+      "sha256": "9556E163008334D653B56DF802C19571DF4AA9BB06504272B16B0A15D182B728"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Assets/TextureReadback.cs",
+      "bytes": 1353,
+      "sha256": "2AD1A8D254A31EE169C6D947B031F14506B21323639DA7BABE9890C4A1DF7F66"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Assets/TextureReadbackProbe.cs",
+      "bytes": 2180,
+      "sha256": "05E51F2F638827B94C7FD1A4159E2D91E215A7D9082765CBB117338400827BF8"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Assets/TextureReplacementProbe.cs",
+      "bytes": 4017,
+      "sha256": "B64723D67C4050BAEA01835390B9B9ED4642E24BCB2A0D85A4CEACCBDA3C0D65"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Assets/TextureStore.cs",
+      "bytes": 14595,
+      "sha256": "967C34693FFFC58DB0F7CB08FE48AA7613D45F022871C8DEF1F7B813DC4726B5"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Config/translation_config.json",
+      "bytes": 539,
+      "sha256": "D5A011D7A7CC1B75C132A24E756A6FC69D5362D7FAC53DFA3A1B999EF1D2A0A5"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Configuration/ConfigManager.cs",
+      "bytes": 3718,
+      "sha256": "F4F13F669C15DCED1799BA775B231D366EC80EC084E8272623936C6D945FC001"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Core/ActiveHierarchy.cs",
+      "bytes": 926,
+      "sha256": "ACFA47C87C266FCA0DD14A227355C89556A136BE4D9CC7B6AB36B596BEE7DCA7"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Core/HotkeyService.cs",
+      "bytes": 796,
+      "sha256": "9923551634F0F7FE37C661DF25541AB79A72EEC7ECE91113461CEA52360AAACA"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Core/ModPaths.cs",
+      "bytes": 1022,
+      "sha256": "C48395280726E52A8D8DF40A5D7E5EB88B706E649F1DCD50C4FCD17F21AA152D"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Core/PngCodec.cs",
+      "bytes": 4336,
+      "sha256": "9CFEF519F3B1E6E1BCBA2E17CB69DD6AE23192DDE9C37A9E9089BC86D7B2E9A5"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Core/ReloadCoordinator.cs",
+      "bytes": 748,
+      "sha256": "6B9BF1E0FCE7D9CF58D3050FBBCD9311B14B8B5A2CD8C58DAF61372BBD463287"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Core/TextContextResolver.cs",
+      "bytes": 1033,
+      "sha256": "5FD2B81B3BF1FF144E0642445A8294FAF3B766544B01F6FF53D16205EAF05723"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Core/TextRefreshPolicy.cs",
+      "bytes": 597,
+      "sha256": "33735DFF6ED609CDCC993118B6D263E85FB37080D3B2BCB3955FA79CDFA858BE"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Core/TextureMatch.cs",
+      "bytes": 2710,
+      "sha256": "10BF4BF37B83456C79ECAA99A073696E646C151160F3F0B612B1E719E1027FAA"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/DiagnosticsModels.cs",
+      "bytes": 1980,
+      "sha256": "BB7A04DE2504C294365E0FC9FDA72B5DDD581F61212D137229AC7C2F402E1817"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/DiagnosticSource.cs",
+      "bytes": 337,
+      "sha256": "1E8CAA2A9D4F89EBD19BD516641FA4510BD79D6D7AAE15650B8EBE6CDA3CF951"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/DiagnosticsReportWriter.cs",
+      "bytes": 2313,
+      "sha256": "AB665B185884183BCCE92CE5221504B17B01D692386745DEB899ECC89740EE37"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/DiagnosticsService.cs",
+      "bytes": 4046,
+      "sha256": "AEAE72E339A762360ABAD5E0F96F0BA24F5947C1D7355E6BA9E14EDC63DB298A"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/DiagnosticString.cs",
+      "bytes": 499,
+      "sha256": "CFC6EEB185276BFD57BCD61CCB3E4E663073939FA7D1142125255FA93BC3AC92"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/DynamicCandidateFamilies.cs",
+      "bytes": 3938,
+      "sha256": "08CB533392A312778828124947C01708E04CB057927EC60724F69D6020042D17"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/HanSourceDetector.cs",
+      "bytes": 539,
+      "sha256": "96C394C23BFE6105C65403D20D743D38A5DB6E058CF4C12CFA8DE2EAA1484AAA"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/RuntimeStringCollector.cs",
+      "bytes": 4435,
+      "sha256": "B4FD36DA1DD4AEAFF5EB5EBBA83BF584968870EAC71F71C82A8A3D5AEBDC90DE"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/RuntimeTextScanner.cs",
+      "bytes": 1365,
+      "sha256": "D49C9EBA8C59A805DDA47A452A25DBDB4B38B3F1103ACF05D00956994EA38414"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/TranslationExportWriter.cs",
+      "bytes": 4923,
+      "sha256": "C559A8718C0E67E88D38BC4ECEC73157DEAD41B0FF7C0A971EC9C40B32C5BB0B"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/TranslatorExportService.cs",
+      "bytes": 1989,
+      "sha256": "37470D5ED9B522472DB5A43EE7D2FEA27BF1E098AFACA04762A4ECBABF03E9AE"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Diagnostics/TranslatorSessionService.cs",
+      "bytes": 4325,
+      "sha256": "9221B09EBCDD57CFCE04FBF76D9F17059103A677EF400628313610134F8CE623"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/Almanac/exact.json",
+      "bytes": 3,
+      "sha256": "CA3D163BAB055381827226140568F3BEF7EAAC187CEBD76878E0B63E9E442356"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/Audio/manifest.json",
+      "bytes": 3,
+      "sha256": "37517E5F3DC66819F61F5A7BB8ACE1921282415F10551D2DEFA5C3EB0985B570"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/Fonts/manifest.json",
+      "bytes": 3,
+      "sha256": "37517E5F3DC66819F61F5A7BB8ACE1921282415F10551D2DEFA5C3EB0985B570"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/glossary.json",
+      "bytes": 3,
+      "sha256": "CA3D163BAB055381827226140568F3BEF7EAAC187CEBD76878E0B63E9E442356"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/manifest.json",
+      "bytes": 141,
+      "sha256": "CAE7E8A8DDD369FEAE1C672D30A6BD4A70B9B0109038523293DB780212F2B526"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/ModStrings.json",
+      "bytes": 10482,
+      "sha256": "CF8F24F0D36F72CE8FFA2DFD57EE66D2C6A0484AFE4D4094DEF3CFAF868A02F2"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/README.md",
+      "bytes": 2902,
+      "sha256": "7C4DE3C74CA8AE09CB2B8361EBED5EE6F9E90A17484BD6D1FB3B7FAD467342FA"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/Strings/context_overrides.json",
+      "bytes": 3,
+      "sha256": "CA3D163BAB055381827226140568F3BEF7EAAC187CEBD76878E0B63E9E442356"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/Strings/dynamic_rules.json",
+      "bytes": 3,
+      "sha256": "37517E5F3DC66819F61F5A7BB8ACE1921282415F10551D2DEFA5C3EB0985B570"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/Strings/exact.json",
+      "bytes": 3,
+      "sha256": "CA3D163BAB055381827226140568F3BEF7EAAC187CEBD76878E0B63E9E442356"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/_template/Textures/manifest.json",
+      "bytes": 3,
+      "sha256": "37517E5F3DC66819F61F5A7BB8ACE1921282415F10551D2DEFA5C3EB0985B570"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/CompositeTranslation.cs",
+      "bytes": 1999,
+      "sha256": "993D36F62774EF549599C0AC21ABA4916ED14C8A5E88BB23181D20631D99C390"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/DynamicExactAudit.cs",
+      "bytes": 1099,
+      "sha256": "E33BCB3B157F285F76B41F6E1FE2A2C126B3FAA8C07F0F2B1D2AF208005BF280"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/DynamicRuleStore.cs",
+      "bytes": 3018,
+      "sha256": "A6B6A6BE63D4345A20D03CA1462BBDEAF226362351FC3D49D3C47321364563D3"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/ExactSectionMarker.cs",
+      "bytes": 1798,
+      "sha256": "D256AE8694A640F705E1DA693A6A41F63FB0114C98E086065EB6F81B65880C21"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/ExactStringStore.cs",
+      "bytes": 1015,
+      "sha256": "1D304AA5167ECC261843D672DB9BA038D5B6C4C59B1117D2A3B91FB3CEEA5AB7"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/JsonFile.cs",
+      "bytes": 1364,
+      "sha256": "7434BC5B3523BC4795366D521569698604BEC5320496E4DCE700DF18E72C8DED"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/LocaleManager.cs",
+      "bytes": 11667,
+      "sha256": "37275DB920AD81A6B8CF0058291BBE0B9562B827C62E089BE7877561E2ED7E5B"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/PackValidationReport.cs",
+      "bytes": 2177,
+      "sha256": "AA28E53F629C29906A30F8D3EEF8F4F4A6157A66007322B089676DCF50C999CF"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/Almanac/exact.json",
+      "bytes": 10072,
+      "sha256": "FB4DE1FE4A3A19B40F4E6C14CFC5D120CB4609057679AF66899FEDF3B9F979CF"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/Audio/manifest.json",
+      "bytes": 3,
+      "sha256": "37517E5F3DC66819F61F5A7BB8ACE1921282415F10551D2DEFA5C3EB0985B570"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/Fonts/manifest.json",
+      "bytes": 271,
+      "sha256": "5B8A8B805B552F9486A82E3D5BBE924919C00810EBC44DF4282E1EBA4E8CAE8E"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/Fonts/NotoSans-Regular.ttf",
+      "bytes": 569208,
+      "sha256": "B85C38ECEA8A7CFB39C24E395A4007474FA5A4FC864F6EE33309EB4948D232D5"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/Fonts/OFL.txt",
+      "bytes": 4377,
+      "sha256": "0DAB92D0544F7B233403F14B84A663BDBFA746982EDA629E7F4F9FFE1B036FEB"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/Fonts/README.md",
+      "bytes": 334,
+      "sha256": "F92CF02A9DDC5F640E337B3C9099CCBDF094A834F3C705A1718D0A78641AA8E4"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/glossary.json",
+      "bytes": 601,
+      "sha256": "81159A6CE04760D337005DF23551B1E8E0EF14678319ECF4828632F103835336"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/manifest.json",
+      "bytes": 141,
+      "sha256": "56BCCF189240A7B9AF2F0B2C7CB646304A020123563D5B8A387DD662E77BBE4D"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/ModStrings.json",
+      "bytes": 11172,
+      "sha256": "FC0B8DDF86C47E356255033B35660100C132236E322AC3E4797B7E00E94D8F79"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/Strings/context_overrides.json",
+      "bytes": 3,
+      "sha256": "CA3D163BAB055381827226140568F3BEF7EAAC187CEBD76878E0B63E9E442356"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/Strings/dynamic_rules.json",
+      "bytes": 397,
+      "sha256": "22AEC06524C202AFF34E435F6F5C798636BC64C2844AF9A803AB67A56D8267F3"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/Strings/exact.json",
+      "bytes": 515890,
+      "sha256": "6A7E8D95F9FDD558E7867E2DEB80C358D377617319BFED8332566C67F6F5A226"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/pt-BR/Textures/manifest.json",
+      "bytes": 3,
+      "sha256": "37517E5F3DC66819F61F5A7BB8ACE1921282415F10551D2DEFA5C3EB0985B570"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/Reload/AutoReloadService.cs",
+      "bytes": 4322,
+      "sha256": "73B6D17213CD9CAC502224192FE898A59A42D2602B4BCA0DABC40907856435A0"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/Reload/TransactionalReloadService.cs",
+      "bytes": 1761,
+      "sha256": "C563969175F679F833D96E7B21430B5BF67C7FE4902765A9F82184CA7BD1BE89"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/RichTextPolicy.cs",
+      "bytes": 579,
+      "sha256": "A0502940602C8B9217837105C107A8AD7C43AE47BCE613E78E23C796BA1FF85F"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/TranslationClassification.cs",
+      "bytes": 1244,
+      "sha256": "AA234B217C263945AA0E891253DC662A99E63527568D7759990B8DBE124ABB85"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/TranslationService.cs",
+      "bytes": 2649,
+      "sha256": "0301A317225D13761DA22D605F02ECA9794B4DA7B38EECBDAE498A999D0CC1DA"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Localization/TranslationValidator.cs",
+      "bytes": 6328,
+      "sha256": "5566EBBBBABDB80E91E2C7B855495C2D04A087D84F3A6FF1E7D945F6D4DBFDE3"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Patches/Game/AudioPatch.cs",
+      "bytes": 490,
+      "sha256": "CCDD23D6E70E6B05B93C9D8824123CF031C01E994C37CADF1974126647BB0BA6"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Patches/Game/GameTextPatches.cs",
+      "bytes": 14231,
+      "sha256": "5F05D3A4AFA147E6000F199500BBAEBF80F0474EB3352734D80144A3C44A9F46"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Patches/Text/TextPatches.cs",
+      "bytes": 2190,
+      "sha256": "056EC498A81293E0A66F7960D490BAEA5CA549430362561FBDF9C408AFC4BBB6"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Plugin/PvZSymbiosisTranslatorMod.cs",
+      "bytes": 119035,
+      "sha256": "5B56C7DC27C87778F46FFC14DC1A64BA6FCC0D5EBF368F62DF73AC2B2CDF6CFA"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/PvZ_Symbiosis_Translator.csproj",
+      "bytes": 5896,
+      "sha256": "6A6115577A107AA93C0272FCEDD7A647E3196A3BE91CE3A2F12D2AFD708B749F"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/QA/LocalizationQaService.cs",
+      "bytes": 22713,
+      "sha256": "E1AD32E81AEF46494A206F3CA7E583BB8761522131E5FE1995243BFF7F5A08EC"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/QA/QaModels.cs",
+      "bytes": 2029,
+      "sha256": "849AB94B0909AA2FC54EA3263E8BB1B9474A3AEA50846B8E2C888D920BC82798"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/QA/QaReportWriter.cs",
+      "bytes": 2786,
+      "sha256": "15CC97F2A32A836120C786414E349A1C560328EB6EEB06E822A6C99CA013C8C7"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Resources/Strings/almanac.json",
+      "bytes": 20400,
+      "sha256": "7462F4292AA07D059CFAF51B44E29CB0D2005B9679C2AF32BF4B24CCF909C266"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Resources/Strings/gameplay.json",
+      "bytes": 256,
+      "sha256": "0EBFB3DDAD25E20FF7F34FA65956D81BB454C51EC5F410D8209D4985065FDC22"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Resources/Strings/translation_simple.csv",
+      "bytes": 1237,
+      "sha256": "44E8C2DF107DEF342B690132192A9C65C59E614D59BCD9C3E7A45E542F3338A0"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/Resources/Strings/ui_menus.json",
+      "bytes": 870,
+      "sha256": "BFEA7AB83405A919693B716B5C86E02DCBA3E953E1A900E9E05F4DA415CD7743"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/GameUiRootRegistry.cs",
+      "bytes": 2119,
+      "sha256": "FA6225362778209F926D4060A65A98699140810A79FE2CB81818B8E96A97A975"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/LanguageMenuIntegration.cs",
+      "bytes": 295,
+      "sha256": "6D1B693CB591A721FB2287B17338809F5FC253C9A37BF1B20CB09424C44A5B54"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/ModLabels.cs",
+      "bytes": 25433,
+      "sha256": "FAEF3F8E63B388D10AFD5F620EAC0F713122E9D0FBBFC4C30B484BC956D5CB00"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/NativeAssetIds.cs",
+      "bytes": 1364,
+      "sha256": "12C46D43A64F36CA11DF560886438BC7DAC1C746DEDF2262FE812F4E86691E44"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/NativeAssetResolver.cs",
+      "bytes": 5713,
+      "sha256": "9B79EA3F985D3E984BB3CCDE1F16C318391E7FDC2F289EEAE9995D061D6BC45E"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/NativeHomeLauncherPolicy.cs",
+      "bytes": 785,
+      "sha256": "F289C9C2B7F9994043196ACF9637FD8C712259A7E5DF37A3696C30760ACC113B"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/NativeSettingsMenuModel.cs",
+      "bytes": 3646,
+      "sha256": "AB788F8D671771864C2E1E2C47759FA38A399C06A0A3708392A847C6FE111FF5"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/NativeTranslatorMenuPolicy.cs",
+      "bytes": 2712,
+      "sha256": "CB90F8C4DA0EC64A2F64065FF6C623B742DD662A84D645B3712F3B0EEBA1CC34"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/NativeTranslatorShell.cs",
+      "bytes": 9198,
+      "sha256": "125C214815568EB4CA637A768CEFA9C2BA5ADE127A025933AB63F185D3453AE2"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/NativeUiFactory.cs",
+      "bytes": 7545,
+      "sha256": "4105690486281148603CF879BF0D36E8306CD64411FF194AB8AE839024723C9C"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/Pages/ContentPage.cs",
+      "bytes": 10100,
+      "sha256": "16DD03E72739B604F33DBBE0DCC46706DC51E206E0CCE99A910B12B1F94DD634"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/Pages/DiagnosticsPage.cs",
+      "bytes": 8734,
+      "sha256": "2A9A11A256DB5CB753E31561B5D21893B78D21B75CAD35A25F805B68D03D0911"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/Pages/GeneralPage.cs",
+      "bytes": 11699,
+      "sha256": "2C5D4CC9CAB0C5B27A33319D4B4A04CA83ABC384D254B7D3638F337ED85ACF45"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/Pages/QaPage.cs",
+      "bytes": 8676,
+      "sha256": "A8544E0A3ED078571B2A6285D44FBBAF6BD286081EF3B37CB2A2A93BB0BA2E7E"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/Pages/TranslatorPage.cs",
+      "bytes": 10185,
+      "sha256": "1C8688B3885B17DEB4B776E4E428A7FB463E4D27576AA15A6338606DA35C5509"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/theme.json",
+      "bytes": 174,
+      "sha256": "C1F74CD730789E414A06A4B3EE8AD08D654C2502A19B82931DE4EF1B7E5365FE"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/ToastService.cs",
+      "bytes": 392,
+      "sha256": "6E225730295625A6E7757D787AD03546D75D4FEB850F5FDC65C192C8F157A8ED"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/TranslatorUiLayout.cs",
+      "bytes": 756,
+      "sha256": "9DC59F816E63D2E984F0E4A120F83B951D97D1C25D8D67F0A8565E0593F48606"
+    },
+    {
+      "path": "PvZ_Symbiosis_Translator/UI/UiThemeStore.cs",
+      "bytes": 4107,
+      "sha256": "727255AE9291DA909E51AE61D2A924D9FFCD85D55C4CB38CA686FB2135F89530"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3559,
+      "sha256": "110F1F56F121FA8F0D641E5FB1DD470B96E729F9D1BA191191C56944B060A1B2"
+    },
+    {
+      "path": "ROADMAP.md",
+      "bytes": 762,
+      "sha256": "2323DF6ECEE6D98030FE05584875C72ED03F41919B1AD10BA9B0FDE387176CE0"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 771,
+      "sha256": "D7AEBD3D7571F78E451BBE9F1B74A76C4F2ED3BBA349DCE704357BA5D46666DA"
+    },
+    {
+      "path": "Tests/Program.cs",
+      "bytes": 67333,
+      "sha256": "1D697E7164FE5CB0969A6FCDCA40238FDEDF0557D71F70DDD5B21932C5CEB904"
+    },
+    {
+      "path": "Tests/Tests.csproj",
+      "bytes": 3461,
+      "sha256": "E9AAA85B8F31C47D0E2E8F2F724B31648D36DCCF4326788DD964CCE6EA9FFC87"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 3541,
+      "sha256": "0E123D8E1A28FC65687E69BA5BFFEF1D74C86A9E1B79A2CD1EBAF69B20C70E59"
+    },
+    {
+      "path": "Tools/AssetExtractor/pyproject.toml",
+      "bytes": 445,
+      "sha256": "10A886DA825B157CBF0071D79C27955D8FCCC26FD7820174FCBDF0F2DB3BE957"
+    },
+    {
+      "path": "Tools/AssetExtractor/README.md",
+      "bytes": 9454,
+      "sha256": "141DF02283DFF6ACEC4BBF27C8DB19EC8158AF8F74E7118FB870010C1FA6FE15"
+    },
+    {
+      "path": "Tools/AssetExtractor/requirements.txt",
+      "bytes": 202,
+      "sha256": "6D9BE71A51C2692C376035201D430B5FCB4F1BBDDE3382E0B51B1C94784879CA"
+    },
+    {
+      "path": "Tools/AssetExtractor/src/pvz_asset_extractor/__init__.py",
+      "bytes": 100,
+      "sha256": "1F09D2B619F1F70906776429DE3B72EC1EEC43B6CBC8B2E5BA770FA7C8485D1F"
+    },
+    {
+      "path": "Tools/AssetExtractor/src/pvz_asset_extractor/__main__.py",
+      "bytes": 48,
+      "sha256": "935A1C1166B0C1EA35A82256345000BF2C73DED718D77773BC27A71ECCE28F7D"
+    },
+    {
+      "path": "Tools/AssetExtractor/src/pvz_asset_extractor/cli.py",
+      "bytes": 11064,
+      "sha256": "F969332DDEA5CF9B38B07F81E132CC1127768688C069322542CED46021BF91B7"
+    },
+    {
+      "path": "Tools/AssetExtractor/src/pvz_asset_extractor/storage.py",
+      "bytes": 7675,
+      "sha256": "80A223B7B3A12F39DA8F516E6B5E6A472F13C8775778041ED8F052A90CB74FB4"
+    },
+    {
+      "path": "Tools/AssetExtractor/src/pvz_asset_extractor/unity.py",
+      "bytes": 7897,
+      "sha256": "AB2E8485B0B4B25B8E210382436DDBD5B2B25E245D87C32DA08408361AC92187"
+    },
+    {
+      "path": "Tools/AssetExtractor/tests/test_extractor.py",
+      "bytes": 8077,
+      "sha256": "CE2AD409BC38DC3BD8B1D676A4B6B1289B3A57AA72098D2FDBC3E7C8B2946CC2"
+    },
+    {
+      "path": "Tools/PackValidator/PackValidator.csproj",
+      "bytes": 502,
+      "sha256": "EEE2A63915AC8802AC0311E6B2DD0637839871370AB9C14B84D22F07E3F9CC3C"
+    },
+    {
+      "path": "Tools/PackValidator/Program.cs",
+      "bytes": 1745,
+      "sha256": "0C9214EB16627390359C931E7E8A5DC467C68513783FF5CA00A3127B7DC3DDB0"
+    },
+    {
+      "path": "Tools/PublicRelease/create_deterministic_zip.py",
+      "bytes": 1160,
+      "sha256": "AF57207F495C1D45C9E012B5DA98F9B3640753630E0AF44C911CAAD56F30C9AA"
+    },
+    {
+      "path": "Tools/PublicRelease/generate_release_notes.py",
+      "bytes": 1611,
+      "sha256": "7905483DEE76C856EBA928A2433C6BAD3B7EEB771C4AE0482D7E5736C2ED6CCC"
+    },
+    {
+      "path": "Tools/PublicRelease/prepare_public_repo.ps1",
+      "bytes": 9457,
+      "sha256": "A29468E885997482896615CBC5C6316B06DB5DAAD6E68AB381786148DD279405"
+    },
+    {
+      "path": "Tools/PublicRelease/public-allowlist.json",
+      "bytes": 1545,
+      "sha256": "B56AC6EF5AAA34161B4C81F3811EBAEB264E75ABCA8C124CD24805E8CD765217"
+    },
+    {
+      "path": "Tools/PublicRelease/README.md",
+      "bytes": 1029,
+      "sha256": "233C1DA2CECF9B96029577E9B2E612800970A16B2FCDCB6D46D5BC3F6FF02AAF"
+    },
+    {
+      "path": "Tools/PublicRelease/validate_public_snapshot.ps1",
+      "bytes": 2559,
+      "sha256": "6142A588566CAE7A38DDF6B4E2EF49747B85D6BBDF3393E8675D1A746521089B"
+    },
+    {
+      "path": "Tools/TranslationExport/Program.cs",
+      "bytes": 2540,
+      "sha256": "19C5D635BCF235D92EC6EF7C399E34BD711DCDBEC43929352D2EAFCE7A5D4745"
+    },
+    {
+      "path": "Tools/TranslationExport/TranslationExport.csproj",
+      "bytes": 964,
+      "sha256": "D87EB4F1CACDA48B5045EAD31E1D3F11F655F5A45EBB8AA70EB22C519BF20F16"
+    }
+  ]
+}

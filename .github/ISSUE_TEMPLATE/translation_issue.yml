@@ -1,0 +1,33 @@
+name: Translation issue
+description: Suggest a contextual translation correction
+title: "[Translation] "
+labels: ["translation"]
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: Chinese source text
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current PT-BR text
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Suggested PT-BR text
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Scene, hierarchy, mechanic, and context
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshot or other evidence

@@ -1,0 +1,50 @@
+name: Bug report
+description: Report reproducible translator behavior
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: mod
+    attributes:
+      label: Mod version
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game, Unity, and MelonLoader versions
+    validations:
+      required: true
+  - type: input
+    id: launcher
+    attributes:
+      label: Launcher or installation method
+  - type: input
+    id: scene
+    attributes:
+      label: Scene or screen
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots and sanitized Latest.log excerpt
+      description: Remove credentials, personal paths, and unrelated private data before attaching.

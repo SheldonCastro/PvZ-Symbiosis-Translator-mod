@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net6.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><CheckEolTargetFramework>false</CheckEolTargetFramework></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../PvZ_Symbiosis_Translator/Localization/*.cs" />
+    <Compile Include="../../PvZ_Symbiosis_Translator/Core/ModPaths.cs" />
+    <Compile Include="../../PvZ_Symbiosis_Translator/Configuration/*.cs" />
+    <Compile Include="../../PvZ_Symbiosis_Translator/Diagnostics/RuntimeStringCollector.cs" />
+    <Compile Include="../../PvZ_Symbiosis_Translator/Diagnostics/DiagnosticString.cs" />
+    <Compile Include="../../PvZ_Symbiosis_Translator/Diagnostics/HanSourceDetector.cs" />
+    <Compile Include="../../PvZ_Symbiosis_Translator/Diagnostics/TranslationExportWriter.cs" />
+    <Compile Include="../../PvZ_Symbiosis_Translator/Diagnostics/DynamicCandidateFamilies.cs" />
+  </ItemGroup>
+</Project>

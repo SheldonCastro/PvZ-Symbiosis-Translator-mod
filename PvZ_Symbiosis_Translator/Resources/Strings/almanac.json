@@ -1,0 +1,479 @@
+{
+  "metadata": {
+    "source": "TextAsset_1747",
+    "path_id": 1747,
+    "game": "PvZ Symbiosis",
+    "original_language": "zh-CN",
+    "target_language": "pt-BR"
+  },
+  "ui_terms": {
+    "0123456789": "",
+    "一二三四五六七八九十": "",
+    "qwertyuiopasdfghjklzxcvbnm": "",
+    "QWERTYUIOPASDFGHJKLZXCVBNM": "",
+    "植物图鉴": "Almanaque de Plantas",
+    "僵尸运动会": "Olimpíada dos Zumbis",
+    "简单困难噩梦": "",
+    "未升级": "Não Atualizado",
+    "已升级": "Atualizado",
+    "最大升级": "Máx. Atualizado",
+    "路径关闭": "Caminho Fechado",
+    "敬请期待": "Aguardem",
+    "升级路径": "Caminho de Upgrade",
+    "挑战模式": "Modo Desafio",
+    "一起摇滚吧！": "Vamos Rock Juntos!",
+    "幽灵来袭": "Fantasmas Chegando",
+    "智能释放技能": "Liberação Inteligente de Habilidade",
+    "手动释放技能": "Liberação Manual de Habilidade",
+    "自动释放技能": "Liberação Automática de Habilidade",
+    "僵尸幽灵": "Zumbi Fantasma",
+    "暴走僵尸": "Zumbi Berserk",
+    "植物僵尸-初见": "Planta-Zumbi - Primeiro Encontro"
+  },
+  "plants": {
+    "peashooter": {
+      "name_chs": "豌豆射手",
+      "name_ptbr": "",
+      "upgrades": {
+        "default": {
+          "name_chs": "主升级路径",
+          "name_ptbr": "Caminho Principal",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "双发豌豆",
+              "name_ptbr": "",
+              "description_chs": "一次发射两颗豌豆。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "军事火力",
+              "name_ptbr": "",
+              "description_chs": "豌豆射手获得军事力量，一次发射四颗豌豆。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "豌豆长官",
+              "name_ptbr": "",
+              "description_chs": "火力已经无法抑制！",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 4,
+              "name_chs": "支离破碎",
+              "name_ptbr": "",
+              "description_chs": "豌豆命中目标后会溅射到其他目标。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 5,
+              "name_chs": "豌豆巨星",
+              "name_ptbr": "",
+              "description_chs": "发射一颗巨大的豌豆炮弹，拥有更大的溅射范围。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 6,
+              "name_chs": "势不可挡",
+              "name_ptbr": "",
+              "description_chs": "以超高射速发射豌豆炮弹，可以将目标击退。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 7,
+              "name_chs": "豌豆弹弹乐",
+              "name_ptbr": "",
+              "description_chs": "拥有韧性的豌豆目中目标后会进行弹射。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 8,
+              "name_chs": "精准弹射",
+              "name_ptbr": "",
+              "description_chs": "豌豆总是会精准地向目标弹射。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 9,
+              "name_chs": "超级弹射",
+              "name_ptbr": "",
+              "description_chs": "根本停不下来！",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 10,
+              "name_chs": "炽阳共振",
+              "name_ptbr": "",
+              "description_chs": "汲取太阳之力的向日葵可以生产更加璀璨的阳光。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 11,
+              "name_chs": "圣辉光环",
+              "name_ptbr": "",
+              "description_chs": "拥有光环加持的向日葵可以生产更多阳光。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 12,
+              "name_chs": "太阳化身",
+              "name_ptbr": "",
+              "description_chs": "我即是太阳！",
+              "description_ptbr": ""
+            }
+          ]
+        }
+      }
+    },
+    "sunflower": {
+      "name_chs": "向日葵",
+      "name_ptbr": "",
+      "upgrades": {
+        "default": {
+          "name_chs": "主升级路径",
+          "name_ptbr": "Caminho Principal",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "欢乐生产",
+              "name_ptbr": "",
+              "description_chs": "提高向日葵生产阳光的速度。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "向日歌手",
+              "name_ptbr": "",
+              "description_chs": "与向日葵们一同歌唱，降低向日葵的生产冷却。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "闪耀歌星",
+              "name_ptbr": "",
+              "description_chs": "大家一起欢唱！",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 4,
+              "name_chs": "见习魔女",
+              "name_ptbr": "",
+              "description_chs": "能力简介：向日葵习得魔法之力，将会生产魔法阳光。 | 能力效果：向日葵生产阳光时额外生产一个魔法阳光，魔法阳光将会索敌最近的目标，命中后造成30点魔法伤害。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 5,
+              "name_chs": "魔女传承",
+              "name_ptbr": "",
+              "description_chs": "能力简介：获取魔女传承的向日葵不在依靠自身生产阳光，而是通过魔女法杖更快地凝聚魔法之力。 | 能力效果：向日葵通过魔法法杖朝最近的目标发射魔法球，对命中的僵尸造成50点魔法伤害，魔法球命中目标后将会绽放魔法紫葵，魔法紫葵会对范围内的僵尸造成15点魔法伤害。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 6,
+              "name_chs": "暗夜魔女",
+              "name_ptbr": "",
+              "description_chs": "能力简介： | 能力效果：魔法法杖凝聚夜光之力后得到全面提升，对命中的僵尸造成80点魔法伤害，魔法紫葵范围增加且伤害提升至30点。",
+              "description_ptbr": ""
+            }
+          ]
+        }
+      }
+    },
+    "cherry_bomb": {
+      "name_chs": "樱桃炸弹",
+      "name_ptbr": "",
+      "upgrades": {
+        "樱桃炸弹的怒火": {
+          "name_chs": "樱桃炸弹的怒火",
+          "name_ptbr": "",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "迷你樱桃",
+              "name_ptbr": "",
+              "description_chs": "能力简介：樱桃炸弹爆炸后将会留下一个迷你樱桃炸弹。 | 能力效果：樱桃炸弹爆炸后会在原地留下一个迷你樱桃炸弹，迷你樱桃炸弹爆炸后会造成小范围且威力为普通樱桃炸弹一半的爆炸。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "兄弟齐心",
+              "name_ptbr": "",
+              "description_chs": "能力简介：我们仨一起上！ | 能力效果：樱桃炸弹爆炸后会在原地留下一个迷你樱桃炸弹，并在周围随机位置留下两颗迷你樱桃炸弹。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "全副武装",
+              "name_ptbr": "",
+              "description_chs": "能力简介：尝尝这个的厉害！ | 能力效果：樱桃炸弹爆炸后会在原地留下一个武装樱桃炸弹，并在周围随机位置留下两颗武装樱桃炸弹，武装樱桃炸弹的爆炸范围和爆炸威力与普通樱桃炸弹一致。",
+              "description_ptbr": ""
+            }
+          ]
+        },
+        "樱桃炸弹升级路径三": {
+          "name_chs": "樱桃炸弹升级路径三",
+          "name_ptbr": "",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "地狱穿刺",
+              "name_ptbr": "",
+              "description_chs": "能力简介：樱桃炸弹爆炸后会撕裂地狱空间，随后刺出地狱锁链。 | 能力效果：地狱锁链会朝最近的目标发射，造成穿透伤害，伤害为600点。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "极寒渊狱",
+              "name_ptbr": "",
+              "description_chs": "能力简介：樱桃炸弹爆炸将释放出凌冽的寒气，对目标造成冷冻效果。 | 能力效果：樱桃炸弹爆炸后会对目标造成冷冻效果，且积累大量寒霜值，地狱锁链的数量最多提升至3条。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "恶魔之手",
+              "name_ptbr": "",
+              "description_chs": "能力简介：无处可逃！ | 能力效果：地狱空间会伸出恶魔之手，将目标抓入地狱空间，恶魔之手的数量最多为3只。",
+              "description_ptbr": ""
+            }
+          ]
+        }
+      }
+    },
+    "ice_peashooter": {
+      "name_chs": "寒冰射手",
+      "name_ptbr": "",
+      "upgrades": {
+        "default": {
+          "name_chs": "主升级路径",
+          "name_ptbr": "Caminho Principal",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "冰原之力",
+              "name_ptbr": "",
+              "description_chs": "能力简介：发射威力更大的冰锥对目标造成伤害。 | 能力效果：发射伤害为35点的冰锥。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "极寒领域",
+              "name_ptbr": "",
+              "description_chs": "能力简介：在前方目标区域持续落下冰锥。 | 能力效果：发射伤害为50点的冰锥，释放技能将会锁定前方目标位置持续落下总共20枚冰锥。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "凛冬王座",
+              "name_ptbr": "",
+              "description_chs": "能力简介：我已苏醒！ | 能力效果：发射伤害为65点的冰锥，释放技能将会锁定前方目标位置持续落下总共50枚冰锥。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 4,
+              "name_chs": "霜华贯穿",
+              "name_ptbr": "",
+              "description_chs": "能力简介：发射尖锐的冰凌，可以穿透目标。 | 能力效果：提升子弹的穿透力，可造成一次穿透。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 5,
+              "name_chs": "裂冰散射",
+              "name_ptbr": "",
+              "description_chs": "能力简介：冰凌命中目标后会分裂出小型冰凌。 | 能力效果：子弹命中目标后会分裂出四枚小型冰凌，小型冰凌伤害为10点，可对目标造成短暂的减速。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 6,
+              "name_chs": "冰华绽裂",
+              "name_ptbr": "",
+              "description_chs": "能力简介：破碎即是新生！ | 能力效果：子弹命中目标后会分裂出十枚小型冰凌。",
+              "description_ptbr": ""
+            }
+          ]
+        },
+        "寒冰射手升级路径一": {
+          "name_chs": "寒冰射手升级路径一",
+          "name_ptbr": "",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "冰晶魔法",
+              "name_ptbr": "",
+              "description_chs": "能力简介：发射魔法寒冰子弹，命中后会积累更多寒霜值。 | 能力效果：魔法寒冰子弹可以积累9点寒霜值。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "冰暴之术",
+              "name_ptbr": "",
+              "description_chs": "能力简介：凝聚寒冰魔法发射子弹，命中后会引爆目标寒霜值造成伤害。 | 能力效果：魔法寒冰子弹可以积累12点寒霜值，子弹命中目标后会留下阵法，阵法生效时会引爆目标体内的寒霜值，引爆伤害为目标寒霜值*2点。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "凝霜法阵",
+              "name_ptbr": "",
+              "description_chs": "能力简介：霜结蔓延之境！ | 能力效果：攻击命中目标后会在原地留下凝霜法阵，法阵内处于冰冻状态的僵尸每隔0.3秒会累加10点寒霜值。",
+              "description_ptbr": ""
+            }
+          ]
+        }
+      }
+    },
+    "wall_nut": {
+      "name_chs": "坚果墙",
+      "name_ptbr": "",
+      "upgrades": {
+        "default": {
+          "name_chs": "主升级路径",
+          "name_ptbr": "Caminho Principal",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "坚韧之铠",
+              "name_ptbr": "",
+              "description_chs": "能力简介：获得坚韧之铠的坚果墙大幅提高生存能力。 | 能力效果：坚果墙的生命值上限提升至6000点。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "意志之盾",
+              "name_ptbr": "",
+              "description_chs": "能力简介：获得意志之盾的坚果墙大幅提高生存能力的同时，似乎还能发挥出意想不到的效果。 | 能力效果：坚果墙的生命值上限提升至8000点，意志之盾可以反弹普通子弹。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "勇气之剑",
+              "name_ptbr": "",
+              "description_chs": "能力简介：获得勇气之剑的坚果墙不再是当初那个炮灰。 | 能力效果：坚果墙每次攻击将对范围内的敌人造成25点伤害。",
+              "description_ptbr": ""
+            }
+          ]
+        },
+        "坚果墙升级路径二": {
+          "name_chs": "坚果墙升级路径二",
+          "name_ptbr": "",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "坚果护卫",
+              "name_ptbr": "",
+              "description_chs": "能力简介：拥有一个贴身坚果护卫，当有危险靠近时，坚果护卫会挺身而出。 | 能力效果：坚果护卫生命值为1000点。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "坚果冲锋队",
+              "name_ptbr": "",
+              "description_chs": "能力简介：召唤一支坚果冲锋队向前方挺进。 | 能力效果：坚果冲锋队生命值为3*1000点。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "坚果精锐队",
+              "name_ptbr": "",
+              "description_chs": "能力简介：召唤一支坚果精锐队打击目标。 | 能力效果：坚果精锐队生命值为3*1000点，每次攻击造成20点伤害。",
+              "description_ptbr": ""
+            }
+          ]
+        }
+      }
+    },
+    "chomper": {
+      "name_chs": "大嘴花",
+      "name_ptbr": "",
+      "upgrades": {
+        "大嘴花升级路径一": {
+          "name_chs": "大嘴花升级路径一",
+          "name_ptbr": "",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "铁齿铜牙",
+              "name_ptbr": "",
+              "description_chs": "能力简介：提升大嘴花的咀嚼速度。 | 能力效果：大嘴花咀嚼速度提升20%。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "毒牙弹舱：",
+              "name_ptbr": "",
+              "description_chs": "能力简介：将敌人的残骸化为复仇的弹药。 | 能力效果：大嘴花可以通过咀嚼僵尸获得子弹能量，当拥有子弹能量时可以发射携带剧毒的子弹，子弹能量容量为20，子弹伤害为10点，中毒伤害为每两秒造成目标2%当前剩余生命值的伤害。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "超载涡轮：",
+              "name_ptbr": "",
+              "description_chs": "能力简介：最大功率模式！ | 能力效果：大嘴花咀嚼速度再次提升20%，子弹能量恢复速率提高一倍，且子弹伤害提升至20点。",
+              "description_ptbr": ""
+            }
+          ]
+        },
+        "大嘴花升级路径二": {
+          "name_chs": "大嘴花升级路径二",
+          "name_ptbr": "",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "深渊巨噬",
+              "name_ptbr": "",
+              "description_chs": "能力简介：大嘴花一次性可以吃下两只僵尸。 | 能力效果：大嘴花一次性最多可以吃下两只僵尸。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "黑洞力场",
+              "name_ptbr": "",
+              "description_chs": "能力简介：强大引力的黑洞可以牵引目标。 | 能力效果：大嘴花张开嘴巴产生黑洞，可以对附近的目标造成牵引。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "坍灭裂空",
+              "name_ptbr": "",
+              "description_chs": "能力简介：由黑洞核心引发的空间坍塌。 | 能力效果：强大的黑洞会引发3次空间坍塌，空间坍塌会对附近的目标造成伤害，伤害值分别为100点、200点、300点。",
+              "description_ptbr": ""
+            }
+          ]
+        }
+      }
+    },
+    "potato_mine": {
+      "name_chs": "土豆地雷",
+      "name_ptbr": "",
+      "upgrades": {
+        "土豆地雷升级路径一": {
+          "name_chs": "土豆地雷升级路径一",
+          "name_ptbr": "",
+          "tiers": [
+            {
+              "tier": 1,
+              "name_chs": "雷霆充能",
+              "name_ptbr": "",
+              "description_chs": "能力简介：充满电力的土豆地雷，爆炸之后可对目标造成麻痹效果。 | 能力效果：土豆雷爆炸后可对目标造成5秒的麻痹效果。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 2,
+              "name_chs": "高压闪电",
+              "name_ptbr": "",
+              "description_chs": "能力简介：土豆地雷顶端汇聚闪电之力，可以对附近的目标释放闪电攻击，闪电攻击有概率对目标造成短暂的麻痹效果。 | 能力效果：土豆雷可以对附近的目标释放闪电攻击，伤害为30点，且有15%的概率对目标造成1秒的麻痹效果，爆炸后会释放电磁场对附近所有目标造成闪电攻击。",
+              "description_ptbr": ""
+            },
+            {
+              "tier": 3,
+              "name_chs": "链式霹雳",
+              "name_ptbr": "",
+              "description_chs": "能力简介：雷鸣的涟漪！ | 能力效果：土豆雷可以对附近的目标释放闪电攻击，伤害为50点，闪电命中目标后最多会进行两次传导，第一次传导伤害为35点，第二次传导伤害为20点，且有15%的概率对目标造成1秒的麻痹效果，爆炸后会释放电磁场对附近所有目标造成闪电攻击。",
+              "description_ptbr": ""
+            }
+          ]
+        }
+      }
+    }
+  }
+}

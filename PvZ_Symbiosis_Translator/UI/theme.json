@@ -1,0 +1,4 @@
+{
+  "background": { "file": "Background2.png", "nativeWidth": 468, "nativeHeight": 516 },
+  "button": { "file": "buttonsmall.png", "nativeWidth": 124, "nativeHeight": 52 }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "latin-fallback",
+    "file": "NotoSans-Regular.ttf",
+    "license": "OFL.txt",
+    "priority": 100,
+    "applyMode": "fallback",
+    "distribution": "bundled",
+    "requiredCharacters": "áàâãéêíóôõúçÁÀÂÃÉÊÍÓÔÕÚÇ"
+  }
+]
