@@ -1,6 +1,6 @@
 # PvZ Symbiosis Translator
 
-An open-source MultiLang translation mod for Plants vs. Zombies: Symbiosis. Brazilian Portuguese is currently the primary and most developed localization, while the architecture supports independent language packs.
+An open-source MultiLang translation mod for Plants vs. Zombies: Symbiosis.
 
 ## Status
 
