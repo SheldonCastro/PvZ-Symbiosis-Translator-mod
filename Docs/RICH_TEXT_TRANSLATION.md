@@ -43,7 +43,7 @@ Placeholders carry runtime values and remain strict. Preserve their exact identi
 }
 ```
 
-Dropping `{0}`, changing `{0:N2}` to `{0}` or introducing an extra `%s` rejects **that entry only**. The rest of the locale still loads. Literal numbers such as `2.5` are not placeholders. A source `50%` followed by ordinary prose is treated as a percentage rather than `%d` formatting. For dynamic rules, preserve each named group exactly once, for example `<color=#FFD700>Sol: ${amount}</color>` with an anchored pattern containing `(?<amount>...)`.
+Dropping `{0}`, changing `{0:N2}` to `{0}` or introducing an extra `%s` rejects **that entry only**. The rest of the locale still loads. Literal numbers such as `2.5` are not placeholders. A source `50%` followed by ordinary prose is treated as a percentage rather than `%d` formatting. For dynamic rules, preserve the named captures, for example `<color=#FFD700>Sol: ${amount}</color>` with an anchored pattern containing `(?<amount>...)`.
 
 An empty target string `""` is allowed to intentionally hide text and generates a warning. A whitespace-only target is rejected; use `""` when hiding is intentional. Unknown sources still display their original text. A rejected mapping also falls back to its original source unless another valid mapping provides that exact key.
 
@@ -63,6 +63,4 @@ Malformed JSON, required-file failures and invalid manifests are structural erro
 
 The runtime writes `Mods/PvZ_Symbiosis_Translator/Diagnostics/translation_validation.json` on each pack load. It contains locale, timestamp, loaded/rejected/warning/fatal counts and per-entry source file, source, target, severity and reason. The console prints a concise summary and points to the report when entries are rejected. Detailed per-entry console messages are available through `debugLogging`. `Tools/PackValidator` uses the same checks and reports `PARTIAL` when it isolates bad entries.
 
-The standalone unit tests exercise exact, context and dynamic values, placeholder safety, report contents and reload from an edited scratch pack. An opt-in runtime smoke probe checks TMP and legacy text properties with synthetic translations, and can temporarily test PageUp against a backed-up external pack. See [validation evidence](RICH_TEXT_VALIDATION.md) for the dated test record. Legacy `UnityEngine.UI.Text` has a smaller rich-text vocabulary than TMP; a TMP-specific tag may display literally or be ignored there. The mod enables `supportRichText` when needed and restores its previous value when translation is disabled with Insert, but does not emulate TMP tags for legacy UI.
-
-This guide does not change the user's current pt-BR wording or promise that every TMP feature is available in every game font/material.
+Legacy `UnityEngine.UI.Text` has a smaller rich-text vocabulary than TMP; a TMP-specific tag may display literally or be ignored there. The mod enables `supportRichText` when needed and restores its previous value when translation is disabled with Insert, but does not emulate TMP tags for legacy UI.

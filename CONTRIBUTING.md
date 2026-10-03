@@ -1,41 +1,21 @@
 # Contributing
 
-Thank you for helping improve PvZ Symbiosis Translator. Open one focused change at a time.
+Forks and pull requests are welcome. Translation corrections, new language packs, texture artwork, bug fixes, and compatibility reports all help. Keep each change focused so it is easy to review.
 
-## Contribution types
+Use [Issues](https://github.com/SheldonCastro/PvZ-Symbiosis-Translator-mod/issues/new/choose) for bugs, translation suggestions, or feature ideas. Include the affected screen and game/mod versions; screenshots are useful for layout problems. Remove personal paths and unrelated data from log excerpts.
 
-Translation corrections, new translations, texture localization, code fixes/features, documentation, and compatibility testing are welcome in a future public repository.
+## Translations and textures
 
-## Required rules
+Read [Localization](Docs/LOCALIZATION.md) before editing a pack. Preserve Chinese source keys and functional placeholders exactly. For PT-BR, follow the [style guide](Docs/PTBR_STYLE_GUIDE.md) and pack glossary. Explain the source, proposed translation, and context in your PR, then validate the pack and preview the screen.
 
-- Match source strings exactly and ordinally; do not add fuzzy or global substring translation.
-- Preserve placeholder identity and count.
-- Keep target TMP markup valid.
-- For PT-BR, follow the canonical glossary and PT-BR style guide. Other language packs should provide and follow their own reviewed terminology guidance.
-- Use dynamic rules only for genuinely variable whole strings.
-- Do not invent plant, zombie, item, or mechanic names without context.
-- Do not submit game binaries, generated game assemblies, extracted asset dumps, original game assets, credentials, private logs, caches, or personal paths.
-- Add meaningful tests for behavior changes and update current documentation.
-- Keep runtime work bounded and lightweight. Never create a translator Canvas.
+Follow [Textures](Docs/TEXTURES.md) for image replacements. Preserve atlas dimensions and alpha, and include a screenshot and the artwork's provenance. Only submit material you may distribute; keep game binaries, generated assemblies, and extracted asset dumps out of the repository.
 
-## Translation changes
+## Code
 
-State the Chinese source, current target, proposed target, scene/context, and reason. Include a screenshot when layout matters. Run PackValidator and full QA.
-
-## Texture changes
-
-Follow [Docs/TEXTURE_CONTRIBUTING.md](Docs/TEXTURE_CONTRIBUTING.md). Submit only artwork you are allowed to distribute. Preserve the full atlas dimensions/alpha and provide runtime screenshot evidence.
-
-## Code changes
-
-Build and test:
+See [Development](Docs/DEVELOPMENT.md) for setup, standalone tests, and deployment. With a local game installation:
 
 ```powershell
-./build.ps1 -Configuration Release -GameDir '<game-directory>'
+./build.ps1 -Configuration Release -GameDir 'C:\Games\PvZ_Symbiosis'
 ```
 
-Describe runtime testing for hooks, assets, or UI. Public CI checks dependency-independent tests; the runtime DLL still needs a local game installation.
-
-## Pull requests
-
-Complete the PR checklist, explain the concrete behavior change, and disclose remaining limits. A contribution is not a promise that the project owner can publish it until source and asset licensing are resolved.
+Add tests for changed behavior and update the relevant guide when needed. Preserve exact matching and the native UI's zero-Canvas rule. For runtime hooks, fonts, textures, or UI changes, describe what you tested in-game and any checks still needed.

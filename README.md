@@ -1,84 +1,58 @@
 # PvZ Symbiosis Translator
 
-An open-source MultiLang translation mod for Plants vs. Zombies: Symbiosis.
+A MultiLang translation mod for Plants vs. Zombies: Symbiosis, built with MelonLoader. Translations live in external language packs; Brazilian Portuguese (`pt-BR`) is currently the most complete pack.
 
-## Status
-
-Public beta candidate. Text translation, custom fonts, native settings, QA, diagnostics, and automatic texture mapping are implemented. Translation and localized visual coverage remain incomplete. Audio replacement is experimental.
-
-## Compatibility
-
-Tested on Windows x64, game 1.2.0, Unity 6000.0.41f1, IL2CPP, and MelonLoader 0.7.3. Other versions may not work.
+The project is in public beta. Text translation is the most mature part of the mod. Translation coverage is incomplete, texture support is still being expanded, and audio replacement is experimental.
 
 ## Features
 
-- 1,735 exact PT-BR translations and 3 bounded dynamic rules
-- context-aware translation with original-text fallback
-- custom font and fallback support
-- native five-page Settings UI with no additional Canvas
-- QA, diagnostics, text capture/export, and auto reload
-- translator-friendly PNG replacement by exact Texture2D filename
-- explicit texture rules for ambiguous assets
-- transactional last-known-good texture reload
+- Runtime text translation, with the original Chinese text as fallback
+- Independent language packs and custom font support
+- PNG texture replacements without editing game archives
+- In-game settings, translation reload, and text export
+- Localization QA and runtime diagnostics
 
 ## Installation
 
-Obtain the game and MelonLoader separately. Download an approved project release, close the game, and copy its DLL/data tree into the documented `Mods` locations. Do not download builds from untrusted sources. Source checkouts require local game-generated references to compile.
+The supported baseline is **Windows x64, Symbiosis 1.2.0 (Unity 6000.0.41f1), and MelonLoader 0.7.3**. Other versions are unverified.
+
+1. Install the game separately, then install [MelonLoader 0.7.3](https://github.com/LavaGang/MelonLoader/releases/tag/v0.7.3) for its executable. Launch the game once and close it.
+2. Download the mod ZIP from [Releases](https://github.com/SheldonCastro/PvZ-Symbiosis-Translator-mod/releases), rather than GitHub's source-code archive.
+3. Extract the ZIP. Copy `PvZ_Symbiosis_Translator.dll` and the `PvZ_Symbiosis_Translator` data folder into the game's `Mods` folder:
+
+   ```text
+   <game>/Mods/
+   ├── PvZ_Symbiosis_Translator.dll
+   └── PvZ_Symbiosis_Translator/
+       ├── Config/
+       └── Localization/
+           └── pt-BR/
+   ```
+
+4. Start the game. Open **Idiomas** on the Home screen to choose a language and adjust settings.
+
+When updating, back up your existing mod folder first, especially any edited language packs. Keep only one translator DLL installed. If the mod does not load, check `<game>/MelonLoader/Latest.log` and include the relevant excerpt in a [bug report](https://github.com/SheldonCastro/PvZ-Symbiosis-Translator-mod/issues/new/choose).
 
 ## Usage
 
-Use the Home **Idiomas** button or default keys: `Insert` toggles translation, `PageUp` reloads, and `PageDown` exports text diagnostics.
+| Default key | Action |
+| --- | --- |
+| `Insert` | Toggle translation |
+| `PageUp` | Reload localization |
+| `PageDown` | Export translation diagnostics |
 
-## Screenshots
+Settings are stored in `Mods/PvZ_Symbiosis_Translator/Config/translation_config.json`. Texture replacement, audio replacement, and automatic reload are off by default.
 
-Screenshots will be added only after they are reviewed for rights, current UI accuracy, and personal information.
+## Language packs
 
-## Development
+The source packs are in [PvZ_Symbiosis_Translator/Localization](PvZ_Symbiosis_Translator/Localization). Copy `_template` to add a language; no DLL rebuild is needed. See [Localization](Docs/LOCALIZATION.md), the [PT-BR style guide](Docs/PTBR_STYLE_GUIDE.md), and [Textures](Docs/TEXTURES.md).
 
-Read `Docs/DEVELOPMENT_SETUP.md` and `Docs/BUILDING.md`. The public tree excludes game binaries and generated references, so provide your own installation.
+## Contributing and development
 
-## Language Packs and Translation Contributions
+Translation corrections, new packs, bug reports, and pull requests are welcome. Read [Contributing](CONTRIBUTING.md) for where to start, [Development](Docs/DEVELOPMENT.md) to build and test, or [Architecture](Docs/ARCHITECTURE.md) for a tour of the code.
 
-Create or improve language packs under `Localization/<locale>`. Read `CONTRIBUTING.md` and `Docs/LOCALIZATION.md`; PT-BR contributors should also follow its style and glossary documents. Preserve exact sources, placeholders, and valid markup.
+## Credits and license
 
-## Bug Reports and Pull Requests
+Maintained by **SheldonCastro (Xyll)**. Thanks to **厘子gg**, creator of Symbiosis, and **Teyliu / PVZFusionTranslation** for inspiration. See [Credits](CREDITS.md).
 
-Use the repository templates. Include versions, scene/context, reproduction steps, screenshots where safe, and a sanitized log excerpt.
-
-## Current Limitations
-
-Coverage is incomplete; large texture atlases use substantial memory; late-created graphics require lifecycle application; audio has no maintained acceptance pack; and compatibility is limited to the tested baseline.
-
-## Disclaimer
-
-This unofficial fan project is not affiliated with PopCap, EA, CherryGG, or other rights holders. It does not distribute the game, game binaries, generated game assemblies, or extracted asset dumps.
-
-## Open Source
-
-PvZ Symbiosis Translator is open source.
-
-You are free to fork, modify, redistribute, port, sublicense, learn from, or incorporate the project's original source code into your own projects.
-
-Community forks, modifications and contributions are welcome.
-
-The original copyright and MIT license notice must be preserved.
-
-See [LICENSE](LICENSE) for the complete license terms.
-
-## Third-Party Content
-
-The MIT License applies only to the original source code and original project-owned material contained in this repository.
-
-Plants vs. Zombies, PvZ Symbiosis, their characters, artwork, textures, audio, trademarks and other original game content belong to their respective owners.
-
-This project is an unofficial fan-made localization/mod and is not affiliated with or endorsed by the original rights holders.
-
-The project license does NOT grant rights over third-party game assets.
-
-## Credits
-
-- **SheldonCastro (Xyll)** — creator and maintainer of PvZ Symbiosis Translator.
-- **厘子gg** — creator of Plants vs. Zombies: Symbiosis. [Bilibili](https://space.bilibili.com/1343792501)
-- **Teyliu / PVZFusionTranslation** — important workflow and community-project inspiration.
-
-See [CREDITS.md](CREDITS.md) for full project, inspiration, framework, library, and tool credits. Licensing and redistribution notices are in [THIRD_PARTY.md](THIRD_PARTY.md).
+Project-owned source and material use the [MIT License](LICENSE). Game assets and other third-party material remain under their owners' terms; see [Third-party notices](THIRD_PARTY.md). This is an unofficial fan project, unaffiliated with the game’s rights holders.

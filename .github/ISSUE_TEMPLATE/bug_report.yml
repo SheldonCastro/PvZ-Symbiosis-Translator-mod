@@ -1,5 +1,5 @@
 name: Bug report
-description: Report reproducible translator behavior
+description: Report a problem with the translator
 title: "[Bug] "
 labels: ["bug"]
 body:
@@ -12,39 +12,23 @@ body:
   - type: input
     id: game
     attributes:
-      label: Game, Unity, and MelonLoader versions
+      label: Game and MelonLoader versions
     validations:
       required: true
-  - type: input
-    id: launcher
+  - type: textarea
+    id: problem
     attributes:
-      label: Launcher or installation method
-  - type: input
-    id: scene
-    attributes:
-      label: Scene or screen
+      label: What happened, and what did you expect?
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Reproduction steps
-    validations:
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected behavior
-    validations:
-      required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual behavior
+      label: How to reproduce
     validations:
       required: true
   - type: textarea
     id: evidence
     attributes:
-      label: Screenshots and sanitized Latest.log excerpt
-      description: Remove credentials, personal paths, and unrelated private data before attaching.
+      label: Log excerpt or screenshot
+      description: Remove personal paths and unrelated private data before attaching.

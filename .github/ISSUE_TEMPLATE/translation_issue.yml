@@ -1,33 +1,30 @@
 name: Translation issue
-description: Suggest a contextual translation correction
+description: Suggest a translation or correction
 title: "[Translation] "
 labels: ["translation"]
 body:
+  - type: input
+    id: language
+    attributes:
+      label: Language pack
+    validations:
+      required: true
   - type: textarea
     id: source
     attributes:
-      label: Chinese source text
+      label: Source and current translation
     validations:
       required: true
   - type: textarea
-    id: current
+    id: suggestion
     attributes:
-      label: Current PT-BR text
-    validations:
-      required: true
-  - type: textarea
-    id: suggested
-    attributes:
-      label: Suggested PT-BR text
+      label: Suggested translation
     validations:
       required: true
   - type: textarea
     id: context
     attributes:
-      label: Scene, hierarchy, mechanic, and context
+      label: Screen or context
+      description: A screenshot helps with wording and layout.
     validations:
       required: true
-  - type: textarea
-    id: evidence
-    attributes:
-      label: Screenshot or other evidence

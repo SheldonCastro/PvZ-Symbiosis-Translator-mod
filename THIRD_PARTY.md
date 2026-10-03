@@ -1,23 +1,25 @@
-# Third-party assets and dependencies
+# Third-party notices
 
-This public repository contains a curated project snapshot. Its author branding, **SheldonCastro (Xyll)**, does not assert ownership of third-party assets. Public availability is not itself a redistribution license for third-party content. Review this inventory before redistributing or publishing a package.
+The root [MIT License](LICENSE) covers project-owned source and material. It does not grant rights to Plants vs. Zombies, PvZ Symbiosis, their assets, trademarks, or other third-party material. Exact translation dictionaries include original source strings needed for matching.
 
-| Item | Location / provenance | License status | Required action |
+## Included font
+
+Noto Sans Regular is distributed under the **SIL Open Font License 1.1**, copyright 2018 The Noto Project Authors. The font, [OFL text](PvZ_Symbiosis_Translator/Localization/pt-BR/Fonts/OFL.txt), and [provenance](PvZ_Symbiosis_Translator/Localization/pt-BR/Fonts/README.md) are kept together in the PT-BR pack. Preserve those notices when redistributing it.
+
+## External dependencies
+
+| Dependency | Author/project | License | Use |
 | --- | --- | --- | --- |
-| Noto Sans Regular | `PvZ_Symbiosis_Translator/Localization/pt-BR/Fonts/NotoSans-Regular.ttf`; provenance recorded in that directory's README | SIL Open Font License 1.1; copyright 2018 The Noto Project Authors; included `OFL.txt` | Preserve license and attribution; follow OFL requirements for any modified version. |
-| ContinuumBold | `Localization/pt-BR/Fonts/ContinuumBold.ttf`; supplied from the user's PvZ Fusion translator setup | **Permission not established.** Font manifest explicitly says `distribution: localOnly`. No license file for this font was found in the recovered source. | Confirm original author/source and redistribution terms or replace/omit from distributed packages. Do not apply Noto's OFL to this file. |
-| Background2.png | `PvZ_Symbiosis_Translator/UI/Background2.png`; supplied from another translation/modding project | **Redistribution status unconfirmed.** No specific license/provenance declaration in the recovered source establishes permission. | Identify creator and obtain/record permission or replace before public distribution. |
-| buttonsmall.png | `PvZ_Symbiosis_Translator/UI/buttonsmall.png`; same supplied UI asset set | **Redistribution status unconfirmed.** | Same review as Background2; no ownership claim by this project. |
-| MelonLoader / Harmony / Il2CppInterop and utility managers | Referenced from the user's installed MelonLoader runtime | External dependency licenses apply; binaries are not included in this repository or copied by deploy | Obtain through their legitimate distributions; do not package runtime DLLs with this mod. |
-| UnityPy / Pillow | Used by offline asset tooling; maintained by K0lb3 and contributors / Python Pillow contributors | Their respective upstream licenses apply | Obtain through the tool's declared Python dependencies and preserve upstream notices. |
-| Unity and generated game assemblies | Compile-time references to the user's Unity IL2CPP installation | Owned/licensed by their respective rights holders; not shipped here | Obtain the game separately; do not commit or redistribute these assemblies. |
+| MelonLoader | LavaGang and contributors | Apache-2.0 | Installed separately |
+| Harmony | Andreas Pardeike and contributors | MIT | Referenced from MelonLoader |
+| Il2CppInterop | BepInEx / Il2CppInterop contributors | LGPL-3.0; see [upstream license](https://github.com/BepInEx/Il2CppInterop/blob/master/LICENSE) | Referenced from MelonLoader |
+| Newtonsoft.Json | James Newton-King and contributors | MIT | Referenced from MelonLoader |
+| UnityPy | K0lb3 and contributors | MIT | Optional offline asset tooling |
+| Pillow | Python Pillow contributors | MIT-CMU | Optional offline asset tooling |
+| Unity and generated game assemblies | Unity and the respective game rights holders | Their respective terms | Local build references only |
 
-The Noto provenance file records this source: https://github.com/notofonts/noto-fonts/blob/main/hinted/ttf/NotoSans/NotoSans-Regular.ttf. This restoration preserves that existing attribution; it does not independently grant rights.
+Runtime and game DLLs are not shipped in this source tree. Obtain them through the game and MelonLoader installations. Python tools declare their dependencies separately; those packages retain their own notices. Project links and acknowledgements are in [CREDITS.md](CREDITS.md).
 
-Exact translation dictionaries contain source-language strings for matching. Legacy `Resources/Strings` data and historical reports are retained as project evidence, not as a substitute for the game or a claim to rights in the underlying text.
+## Assets excluded from source
 
-The recovered reachable history was checked for original game executables, generated/runtime DLLs, Unity asset containers and metadata binaries. None were found. Bundled binary source assets found in the active tree are the two fonts and two UI PNGs listed above. Audio and texture replacement manifests ship empty.
-
-The original project source code and original project-owned material are licensed under the root MIT `LICENSE`. That license does not cover third-party game content or other assets beyond their own licenses. The public-candidate allowlist excludes ContinuumBold, the two uncleared UI PNGs, native UI contact sheets/catalog output, the untranslated runtime `Home.png` test, and original/extracted game assets. Noto Sans is included with its OFL and provenance files.
-
-Project and dependency attribution is consolidated in [CREDITS.md](CREDITS.md).
+ContinuumBold, `Background2.png`, and `buttonsmall.png` are not included because redistribution permission has not been established. Noto's OFL does not apply to them. Original game dumps and atlases are also excluded. Any contributed replacement font, texture, or audio needs its own provenance and distribution terms.

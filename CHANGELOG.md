@@ -1,47 +1,31 @@
 # Changelog
 
-This file records verified project changes. Earlier private development history is summarized only where supported by Git and current checkpoint evidence.
-
-## [Unreleased]
-
-### Added
-
-- Private-to-public repository promotion plan and documentation model.
-- Allowlist-based public candidate preparation and validation workflow.
-- Community issue/PR templates and contribution guides.
-- Deterministic local public candidate manifests, archive generation, and safety scans.
+## Unreleased
 
 ### Changed
 
-- Current developer, localization, texture, QA, diagnostics, and release documentation.
+- Consolidated contributor documentation and clarified installation instructions.
+- Shortened issue forms and the pull request checklist.
+- Removed unused UI code and reduced asset-loading log noise.
 
 ### Fixed
 
-- Texture reload now retains the last working replacement during a transient invalid PNG save.
-- Texture QA decodes PNG data and reports duplicate automatic/explicit identities and unsupported files.
-- Replacement textures preserve source filter, wrap, and anisotropic settings.
-- Texture ownership has explicit shutdown cleanup and quieter normal logging.
-- Legacy UI/export shortcut hints now match Insert, PageUp, and PageDown.
+- Included the zero-Canvas guard required by the build script and CI.
 
-### Validation
+## 1.1.0 — 2026-09-26
 
-- Final Release build: zero warnings and zero errors.
-- Automated suite: 159 passing tests.
-- Real-game texture probe: Image, RawImage, SpriteRenderer, geometry/sampling preservation, valid/invalid reload, readback, restoration, and zero translator Canvas passed.
-- Local public candidate: 167 files; forbidden-content scan passed; content digest and ZIP SHA-256 reproduced on consecutive builds; no push performed.
-
-## [1.1.0] - 2026-09-26
+Released as [v1.1.0-beta.1](https://github.com/SheldonCastro/PvZ-Symbiosis-Translator-mod/releases/tag/v1.1.0-beta.1).
 
 ### Added
 
-- Native five-page Translator Settings UI with zero translator-created Canvas objects.
-- QA, Diagnostics, Translator Mode, capture/export, and auto reload.
-- Sectioned PT-BR exact translations, custom font support, and texture localization vertical slice.
+- Native Translator Settings with General, Content, Translator, QA, and Diagnostics pages.
+- Translator Mode, text capture/export, and automatic reload.
+- External PT-BR language pack and custom font support.
+- Automatic and explicit PNG texture replacement.
 
-### Validation
+### Fixed
 
-- 1,735 exact translations and 3 dynamic rules.
-- Home/Almanac/native UI lifecycle and texture replacement probes recorded in project documentation.
-
-[Unreleased]: Docs/PROJECT_STATUS.md
-[1.1.0]: Docs/PROJECT_STATUS.md
+- Texture reload keeps the previous image during a temporarily invalid PNG save.
+- Texture QA detects unsupported PNGs and conflicting mappings.
+- Replacement textures preserve source sampling settings and release owned objects on shutdown.
+- Shortcut hints match Insert, PageUp, and PageDown.

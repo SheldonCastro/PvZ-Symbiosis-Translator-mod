@@ -1,24 +1,24 @@
 # Credits
 
-## Project
+**SheldonCastro (Xyll)** created and maintains PvZ Symbiosis Translator.
 
-- **SheldonCastro (Xyll)** — creator and maintainer of PvZ Symbiosis Translator.
+**厘子gg** created Plants vs. Zombies: Symbiosis. [Bilibili](https://space.bilibili.com/1343792501)
 
-## Game creator
+**Teyliu / [PVZFusionTranslation](https://github.com/Teyliu/PVZFusionTranslation)** inspired the localization workflow, organization, and community approach. PvZ Symbiosis Translator is an independent project.
 
-- **厘子gg** — creator of Plants vs. Zombies: Symbiosis. [Bilibili](https://space.bilibili.com/1343792501)
+Thanks to everyone who contributes translations, tests builds, and reports problems.
 
-## Inspiration
+## Tools and libraries
 
-- **Teyliu / [PVZFusionTranslation](https://github.com/Teyliu/PVZFusionTranslation)** — an important inspiration and reference for localization workflow, project organization, folder structure, and community-oriented translation development. PvZ Symbiosis Translator remains an independent project and does not claim ownership of, or imply that all of its code or assets derive from, PVZFusionTranslation.
+- [MelonLoader](https://github.com/LavaGang/MelonLoader) — LavaGang and contributors
+- [Harmony](https://github.com/pardeike/Harmony) — Andreas Pardeike and contributors
+- [Il2CppInterop](https://github.com/BepInEx/Il2CppInterop) — BepInEx / Il2CppInterop contributors
+- [UnityPy](https://github.com/K0lb3/UnityPy) — K0lb3 and contributors
+- [Pillow](https://github.com/python-pillow/Pillow) — Python Pillow contributors
+- [Noto Sans](https://github.com/notofonts/noto-fonts) — The Noto Project Authors
 
-## Tools, frameworks, and libraries
+Licensing details are in [THIRD_PARTY.md](THIRD_PARTY.md).
 
-- **[MelonLoader](https://github.com/LavaGang/MelonLoader)** — LavaGang and contributors.
-- **[Harmony](https://github.com/pardeike/Harmony)** — Andreas Pardeike (pardeike) and contributors.
-- **[Il2CppInterop](https://github.com/BepInEx/Il2CppInterop)** — BepInEx / Il2CppInterop contributors.
-- **[UnityPy](https://github.com/K0lb3/UnityPy)** — K0lb3 and contributors.
-- **[Pillow](https://github.com/python-pillow/Pillow)** — Python Pillow contributors.
-- **[Noto Sans](https://github.com/notofonts/noto-fonts)** — The Noto Project Authors.
+### Development note
 
-See [THIRD_PARTY.md](THIRD_PARTY.md) for licensing and redistribution boundaries.
+ChatGPT Codex was used as a development assistant for some documentation, repetitive edits, and code review. Project direction, localization decisions, testing, and releases are maintained by Xyll.
