@@ -5,8 +5,7 @@ namespace PvZSymbiosisTranslator.Assets;
 
 public static class TextureReadback
 {
-    // Validated on Unity 6000.0.41f1/D3D11, original non-readable Home texture.
-    // Called only for an explicit dump request, never during matching or per frame.
+    // Readback is opt-in because copying a large atlas stalls the rendering thread.
     public static byte[] Encode(Texture original)
     {
         if(original==null || original.width<=0 || original.height<=0) throw new ArgumentException("Missing texture");

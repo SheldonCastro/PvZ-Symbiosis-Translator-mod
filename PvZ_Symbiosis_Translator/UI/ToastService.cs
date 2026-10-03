@@ -10,5 +10,4 @@ public sealed class ToastService
         if(error) MelonLogger.Warning("[NOTIFICATION] " + message);
         else MelonLogger.Msg("[NOTIFICATION] " + message);
     }
-    public void Update() { }
 }

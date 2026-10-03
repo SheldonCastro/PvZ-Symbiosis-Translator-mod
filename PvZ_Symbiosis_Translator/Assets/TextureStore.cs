@@ -17,8 +17,7 @@ public sealed class TextureStore : IDisposable
 {
     private sealed class ActiveEntry
     {
-        public string Id="",RelativePath="",Hash="";
-        public bool Automatic,RetainedLastGood;
+        public string RelativePath="",Hash="";
         public TextureMatch Match;
         public Texture2D Texture;
     }
@@ -45,6 +44,7 @@ public sealed class TextureStore : IDisposable
     {
         foreach(var action in restore) try { action(); } catch(Exception ex) { MelonLogger.Warning("Texture restore: "+ex.Message); }
         restore.Clear(); applied.Clear(); samplingProfiles.Clear();
+        // Only replacement sprites belong to this store; game originals stay alive.
         foreach(var sprite in created) if(sprite!=null) UnityEngine.Object.Destroy(sprite);
         created.Clear();
     }
@@ -63,7 +63,7 @@ public sealed class TextureStore : IDisposable
             if(enabled)
             {
                 var root=Path.GetFullPath(Path.Combine(locale,"Textures")).TrimEnd(Path.DirectorySeparatorChar)+Path.DirectorySeparatorChar;
-                ActiveEntry Decode(string id,TextureMatch match,string path,bool automatic)
+                ActiveEntry Decode(string id,TextureMatch match,string path)
                 {
                     var bytes=File.ReadAllBytes(path);var hash=Convert.ToHexString(SHA256.HashData(bytes));
                     Texture2D texture;
@@ -71,17 +71,17 @@ public sealed class TextureStore : IDisposable
                     else if(cache.TryGetValue(hash,out var cached)&&cached!=null)texture=cached;
                     else if(newlyOwned.TryGetValue(hash,out var pending)&&pending!=null)texture=pending;
                     else{texture=RuntimeImageService.LoadPng(path,debug,false);newlyOwned.Add(hash,texture);}
-                    return new ActiveEntry{Id=id,RelativePath=Path.GetRelativePath(root,path).Replace('\\','/'),Hash=hash,Automatic=automatic,Match=match,Texture=texture};
+                    return new ActiveEntry{RelativePath=Path.GetRelativePath(root,path).Replace('\\','/'),Hash=hash,Match=match,Texture=texture};
                 }
-                void AddOrRetain(string id,TextureMatch match,string path,bool automatic)
+                void AddOrRetain(string id,TextureMatch match,string path)
                 {
-                    try{next.Add(id,Decode(id,match,path,automatic));}
+                    try{next.Add(id,Decode(id,match,path));}
                     catch(Exception ex)
                     {
                         candidateErrors.Add(id+": "+ex.Message);
                         var relative=Path.GetRelativePath(root,path).Replace('\\','/');
-                        if(active.TryGetValue(id,out var previous)&&previous.Texture!=null&&previous.RelativePath==relative&&MatchIdentity(previous.Match)==MatchIdentity(match)){previous.RetainedLastGood=true;next.Add(id,previous);retained++;MelonLogger.Warning($"Texture {id}: invalid candidate; retained last known good ({ex.Message})");}
-                        else MelonLogger.Warning($"Texture {id}: candidate skipped ({ex.Message})");
+                        if(active.TryGetValue(id,out var previous)&&previous.Texture!=null&&previous.RelativePath==relative&&MatchIdentity(previous.Match)==MatchIdentity(match)){next.Add(id,previous);retained++;MelonLogger.Warning($"[Textures] {id}: invalid PNG; keeping previous replacement ({ex.Message})");}
+                        else MelonLogger.Warning($"[Textures] {id}: skipped ({ex.Message})");
                     }
                 }
 
@@ -97,7 +97,7 @@ public sealed class TextureStore : IDisposable
                     if(match==null||(match.Id==null&&(match.TextureName==null||match.Width<=0||match.Height<=0)))throw new FormatException("Texture match requires textureName/width/height or metadata ID");
                     var identity=MatchIdentity(match);if(!sourceIdentities.Add(identity))throw new FormatException("Duplicate explicit texture source identity: "+identity);
                     var replacement=entry.TryGetProperty("replacement",out var file)?file.GetString():entry.GetProperty("file").GetString();
-                    var path=SafePath(root,replacement);AddOrRetain(id,match,path,false);explicitFiles.Add(path);if(match.TextureName!=null)explicitTextureNames.Add(match.TextureName);explicitCount++;
+                    var path=SafePath(root,replacement);AddOrRetain(id,match,path);explicitFiles.Add(path);if(match.TextureName!=null)explicitTextureNames.Add(match.TextureName);explicitCount++;
                 }
 
                 var automaticIdentities=new HashSet<string>(StringComparer.Ordinal);
@@ -106,12 +106,12 @@ public sealed class TextureStore : IDisposable
                     var path=Path.GetFullPath(candidate);if(!path.StartsWith(root,StringComparison.OrdinalIgnoreCase)||explicitFiles.Contains(path))continue;
                     var textureName=Path.GetFileNameWithoutExtension(path);if(string.IsNullOrWhiteSpace(textureName)||explicitTextureNames.Contains(textureName))continue;
                     var relative=Path.GetRelativePath(root,path).Replace('\\','/');var id="auto:"+relative;ActiveEntry decoded;
-                    try{decoded=Decode(id,new TextureMatch{TextureName=textureName},path,true);}
+                    try{decoded=Decode(id,new TextureMatch{TextureName=textureName},path);}
                     catch(Exception ex)
                     {
                         candidateErrors.Add(id+": "+ex.Message);
-                        if(active.TryGetValue(id,out var previous)&&previous.Texture!=null){previous.RetainedLastGood=true;next.Add(id,previous);retained++;automaticCount++;MelonLogger.Warning($"Texture {id}: invalid candidate; retained last known good ({ex.Message})");}
-                        else MelonLogger.Warning($"Texture {id}: candidate skipped ({ex.Message})");
+                        if(active.TryGetValue(id,out var previous)&&previous.Texture!=null){next.Add(id,previous);retained++;automaticCount++;MelonLogger.Warning($"[Textures] {id}: invalid PNG; keeping previous replacement ({ex.Message})");}
+                        else MelonLogger.Warning($"[Textures] {id}: skipped ({ex.Message})");
                         continue;
                     }
                     decoded.Match.Width=decoded.Texture.width;decoded.Match.Height=decoded.Texture.height;var identity=MatchIdentity(decoded.Match);
@@ -121,18 +121,19 @@ public sealed class TextureStore : IDisposable
                 }
             }
 
+            // Keep active assignments until all new mappings have been checked.
             Restore();replacements.Clear();matches.Clear();active.Clear();
             foreach(var pair in next){active.Add(pair.Key,pair.Value);replacements.Add(pair.Key,pair.Value.Texture);matches.Add(pair.Key,pair.Value.Match);}
             foreach(var pair in newlyOwned)if(!cache.ContainsKey(pair.Key))cache.Add(pair.Key,pair.Value);
             foreach(var key in cache.Keys.ToArray())if(!replacements.ContainsValue(cache[key])){UnityEngine.Object.Destroy(cache[key]);cache.Remove(key);}
             ExplicitCount=enabled?explicitCount:0;AutomaticCount=enabled?automaticCount:0;RetainedLastGoodCount=enabled?retained:0;LastError=enabled?string.Join(" | ",candidateErrors.Take(5)):"";
             timer.Stop();LastLoadDurationMilliseconds=timer.ElapsedMilliseconds;
-            if(enabled)MelonLogger.Msg($"Texture load: {ExplicitCount} explicit; {AutomaticCount} automatic; {Count} total; {RetainedLastGoodCount} retained; {LastLoadDurationMilliseconds} ms");
+            if(enabled)MelonLogger.Msg($"[Textures] Loaded {Count} replacements; {RetainedLastGoodCount} kept from previous load ({LastLoadDurationMilliseconds} ms)");
         }
         catch(Exception ex)
         {
             foreach(var texture in newlyOwned.Values.Distinct())if(texture!=null&&!cache.ContainsValue(texture))UnityEngine.Object.Destroy(texture);
-            timer.Stop();LastLoadDurationMilliseconds=timer.ElapsedMilliseconds;LastError=ex.Message;MelonLogger.Error("Texture load rejected; retaining previous state: "+ex.Message);throw;
+            timer.Stop();LastLoadDurationMilliseconds=timer.ElapsedMilliseconds;LastError=ex.Message;MelonLogger.Error("[Textures] Reload failed; keeping previous replacements: "+ex.Message);throw;
         }
     }
 
@@ -171,13 +172,13 @@ public sealed class TextureStore : IDisposable
         foreach(var pair in matches)try{foreach(var i in pair.Value.Resolve(sources)){if(!assignments.TryGetValue(i,out var ids)){ids=new List<string>();assignments.Add(i,ids);}ids.Add(pair.Key);}}catch(Exception ex){MelonLogger.Warning(pair.Key+": "+ex.Message);}
         foreach(var pair in assignments)try
         {
-            if(pair.Value.Count!=1){MelonLogger.Warning("AMBIGUOUS MATCH: multiple texture mappings target "+sources[pair.Key].Id);continue;}var target=targets[pair.Key];var replacement=replacements[pair.Value[0]];
+            if(pair.Value.Count!=1){MelonLogger.Warning("[Textures] Multiple mappings match "+sources[pair.Key].Id);continue;}var target=targets[pair.Key];var replacement=replacements[pair.Value[0]];
             if(target.Texture.width!=replacement.width||target.Texture.height!=replacement.height)throw new FormatException("Replacement dimensions differ from original");var image=target.Component.TryCast<Image>();var raw=target.Component.TryCast<RawImage>();var renderer=target.Component.TryCast<SpriteRenderer>();
             if(image!=null){var original=image.sprite;var overridden=image.overrideSprite;var sprite=MakeSprite(target.Sprite,replacement,image.useSpriteMesh);image.sprite=sprite;image.overrideSprite=sprite;restore.Add(()=>{if(image!=null&&image.sprite==sprite){image.sprite=original;image.overrideSprite=overridden;}});}
             else if(raw!=null){PreserveSampling(replacement,target.Texture);var original=raw.texture;raw.texture=replacement;restore.Add(()=>{if(raw!=null&&raw.texture==replacement)raw.texture=original;});}
             else if(renderer!=null){var original=renderer.sprite;var sprite=MakeSprite(original,replacement,true);renderer.sprite=sprite;restore.Add(()=>{if(renderer!=null&&renderer.sprite==sprite)renderer.sprite=original;});}applied.Add(target.Component.GetInstanceID());
         }
-        catch(Exception ex){MelonLogger.Warning("Texture replacement skipped: "+ex.Message);}MelonLogger.Msg($"Texture apply: {applied.Count} components; {replacements.Count} mappings");
+        catch(Exception ex){MelonLogger.Warning("Texture replacement skipped: "+ex.Message);}if(PvZSymbiosisTranslatorMod.Config.DebugLogging)MelonLogger.Msg($"[Textures] Applied to {applied.Count} components");
     }
 
     public void Dispose()

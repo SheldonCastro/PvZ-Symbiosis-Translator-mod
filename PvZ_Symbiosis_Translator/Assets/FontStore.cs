@@ -11,7 +11,6 @@ using PvZSymbiosisTranslator.Localization;
 
 namespace PvZSymbiosisTranslator.Assets;
 
-// Fallback fonts preserve the original font, material, size, alignment and layout settings.
 public sealed class FontStore
 {
     private readonly Dictionary<string, TMP_FontAsset> cache = new(StringComparer.Ordinal);
@@ -30,36 +29,27 @@ public sealed class FontStore
     {
         RestoreAll();
         activeFallbacks.Clear(); primaryReplacement = null; replacementFallbacksAdded.Clear(); enabled = false;
-        MelonLogger.Msg($"FontStore.Load shouldEnable={shouldEnable}; manifest={Path.Combine(localeDirectory, "Fonts", "manifest.json")}");
-        // The translator workbench always uses the configured primary font for
-        // visual consistency. shouldEnable controls replacement on game text.
-        // Loading remains required even when global custom fonts are disabled.
+        // Settings still needs its fonts when replacement on game text is disabled.
         if (File.Exists(Path.Combine(localeDirectory, "Fonts", "manifest.json")))
         {
             var manifestPath = Path.Combine(localeDirectory, "Fonts", "manifest.json");
-            MelonLogger.Msg($"Font manifest exists: {File.Exists(manifestPath)}");
             using var manifest = JsonFile.Read(manifestPath,message=>MelonLogger.Warning(message));
-            MelonLogger.Msg($"Font entries: {manifest.RootElement.GetArrayLength()}");
             foreach (var entry in manifest.RootElement.EnumerateArray().OrderByDescending(e => e.TryGetProperty("priority", out var p) ? p.GetInt32() : 0))
             {
                 var path = Path.GetFullPath(Path.Combine(localeDirectory, "Fonts", entry.GetProperty("file").GetString()));
-                MelonLogger.Msg("Loading font: " + Path.GetFileName(path) + "; file exists: " + File.Exists(path));
                 var hash = Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(path)));
                 if (!cache.TryGetValue(hash, out var fontAsset))
                 {
-                    MelonLogger.Msg("Creating TMP_FontAsset...");
                     fontAsset = TMP_FontAsset.CreateFontAsset(path, 0, 90, 9, UnityEngine.TextCore.LowLevel.GlyphRenderMode.SDFAA, 1024, 1024);
-                    MelonLogger.Msg("CreateFontAsset result: " + (fontAsset == null ? "NULL" : "SUCCESS"));
                     if (fontAsset == null) throw new InvalidOperationException("TMP_FontAsset creation failed: " + path);
                     UnityEngine.Object.DontDestroyOnLoad(fontAsset); cache.Add(hash, fontAsset);
                 }
                 if (fontAsset == null) throw new InvalidOperationException("TMP_FontAsset creation failed: " + path);
-                if (!cache.ContainsKey(hash)) { UnityEngine.Object.DontDestroyOnLoad(fontAsset); cache.Add(hash, fontAsset); }
                 var mode = entry.TryGetProperty("applyMode", out var m) ? m.GetString() : "fallback";
                 if (mode == "replace" && primaryReplacement == null) primaryReplacement = fontAsset; else if (mode == "fallback") activeFallbacks.Add(fontAsset);
             }
             enabled = shouldEnable && Ready;
-            MelonLogger.Msg($"Selected primary replacement: {(primaryReplacement == null ? "none" : "configured")}; FontStore Ready: {Ready}; FontStore Enabled: {enabled}; Configured fallbacks: {activeFallbacks.Count}");
+            MelonLogger.Msg($"[Fonts] Loaded {activeFallbacks.Count} fallbacks; primary replacement: {(primaryReplacement == null ? "none" : "configured")}");
         }
     }
     public void Apply(TMP_Text text)

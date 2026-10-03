@@ -34,7 +34,7 @@ public sealed class AudioStore
             if (!resolved.StartsWith(Path.GetFullPath(root) + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase) || !File.Exists(resolved)) throw new FileNotFoundException("Missing audio replacement", resolved);
             paths.Add(clip, resolved);
         }
-        MelonLogger.Msg($"Audio manifest PASS: {paths.Count} exact clip mappings");
+        MelonLogger.Msg($"[Audio] Loaded {paths.Count} clip mappings");
         var current=++generation;
         foreach(var pair in paths) MelonCoroutines.Start(Preload(pair.Key,pair.Value,current));
     }

@@ -6,7 +6,7 @@ using MelonLoader;
 
 namespace PvZSymbiosisTranslator.Assets;
 
-// Opt-in process test only. Never invoked by F8 or normal gameplay.
+// Opt-in process test; normal gameplay never runs this probe.
 internal static class TextureReadbackProbe
 {
     public static void Run(string directory)

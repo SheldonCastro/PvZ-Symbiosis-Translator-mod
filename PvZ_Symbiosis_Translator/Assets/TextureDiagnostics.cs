@@ -15,8 +15,7 @@ namespace PvZSymbiosisTranslator.Assets;
 
 public sealed class TextureDiagnostics
 {
-    // New GPU copy + manager encode path verified on one non-readable Home texture.
-    // Historical GetPixels wrappers remain unused. F8 dumps explicit requests only.
+    // GPU readback is limited to explicit dump requests; matching needs no pixel data.
     public static bool PixelReadbackVerified => true;
     public sealed class Entry {
         public string Id {get;set;} public string Scene {get;set;} public string Hierarchy {get;set;} public string Component {get;set;}

@@ -194,7 +194,6 @@ public class PvZSymbiosisTranslatorMod : MelonMod
     public override void OnUpdate()
     {
         hotkeys.Update(Config.ToggleTranslationKey, Config.ReloadTranslationKey, Config.DiagnosticKey);
-        toast.Update();
         ProcessAutoReload();
         if(translatorPageDirty) { translatorPageDirty=false;RefreshNativeUiLabels(); }
 
